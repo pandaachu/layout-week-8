@@ -1,0 +1,413 @@
+---
+title: Aloha Index
+layout: ./app/layout/index.ejs
+engine: ejs
+current: index
+---
+
+<div class="index">
+  <section class="heroBanner position-relative">
+    <h2 class="h2 heroBanner__title position-absolute alignCenter font-weight-bold text-white">
+      Discover your
+      <br class="d-lg-none" />
+      ideal hotel
+    </h2>
+    <div class="heroBanner__swiper swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div
+          class="heroBanner__item heroBanner__item1 swiper-slide bg-cover bg-cover--center"
+        ></div>
+        <div
+          class="heroBanner__item heroBanner__item2 swiper-slide bg-cover bg-cover--center"
+        ></div>
+        <div
+          class="heroBanner__item heroBanner__item3 swiper-slide bg-cover bg-cover--center"
+        ></div>
+        <div
+          class="heroBanner__item heroBanner__item4 swiper-slide bg-cover bg-cover--center"
+        ></div>
+      </div>
+      <div class="heroBanner__button swiper-button-prev"></div>
+      <div class="heroBanner__button swiper-button-next"></div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="row justify-content-center">
+      <section class="col-lg-10">
+        <form class="searchBar d-flex flex-column flex-md-row p-4 rounded-lg">
+          <div
+            id="destinationHeading"
+            class="searchBar__group rounded btn"
+            data-toggle="collapse"
+            data-target="#destination"
+            aria-controls="destination"
+          >
+            <div class="searchBar__group__heading">
+              <span class="material-icons mr-3">location_on</span>
+              <h6 class="h6 text-muted">Destination</h6>
+            </div>
+            <ul
+              id="destination"
+              class="collapse searchBar__dropdown-item shadow-sm list-group mt-2 fade"
+              aria-labelledby="destinationHeading"
+            >
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Bangkok
+                    <br />
+                    <small class="text-muted">Thailand</small>
+                  </h6>
+                </a>
+              </li>
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Osaka
+                    <br />
+                    <small>Japan</small>
+                  </h6>
+                </a>
+              </li>
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Roma
+                    <br />
+                    <small class="text-muted">Italy</small>
+                  </h6>
+                </a>
+              </li>
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Paris
+                    <br />
+                    <small class="text-muted">London</small>
+                  </h6>
+                </a>
+              </li>
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Reykjavík
+                    <br />
+                    <small class="text-muted">Iceland</small>
+                  </h6>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div
+            id="checkTimeHeading"
+            class="searchBar__group rounded btn"
+            data-toggle="collapse"
+            data-target="#checkTime"
+            aria-controls="checkTime"
+          >
+            <div class="searchBar__group__heading searchBar__icon searchBar__icon--dateRange">
+              <!-- <h6 class="h6 text-muted ">Check-in / Check-out</h6> -->
+              <!-- <span class="material-icons mr-3">date_range</span> -->
+              <input
+                class="searchBar__input font-OpenSans"
+                type="text"
+                name="js-datePicker"
+                placeholder="Check-in / Check-out"
+              />
+              <!-- <label for="dates1">dates1</label><input id="dates1" type="text" name="dates" value="" /> -->
+            </div>
+            <ul
+              id="checkTime"
+              class="collapse searchBar__dropdown-item shadow-sm list-group mt-2 fade"
+              aria-labelledby="checkTimeHeading"
+            ></ul>
+          </div>
+          <div
+            id="guestsHeading"
+            class="searchBar__group rounded btn"
+            data-toggle="collapse"
+            data-target="#guests"
+            aria-controls="guests"
+          >
+            <div class="searchBar__group__heading">
+              <span class="material-icons mr-3">person</span>
+              <h6 class="h6 text-muted">Guests</h6>
+            </div>
+            <ul
+              id="guests"
+              class="collapse searchBar__dropdown-item shadow-sm list-group mt-2 fade"
+              aria-labelledby="guestsHeading"
+            >
+              <li
+                class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center"
+              >
+                <h6 class="h6">Adult</h6>
+                <div class="d-flex">
+                  <a href="#"><span class="material-icons mr-3">remove</span></a>
+                  <span class="mr-3">2</span>
+                  <a href="#"><span class="material-icons mr-3">add</span></a>
+                </div>
+              </li>
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Osaka
+                    <br />
+                    <small>Japan</small>
+                  </h6>
+                </a>
+              </li>
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Roma
+                    <br />
+                    <small class="text-muted">Italy</small>
+                  </h6>
+                </a>
+              </li>
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Paris
+                    <br />
+                    <small class="text-muted">London</small>
+                  </h6>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-primary text-uppercase">search</button>
+        </form>
+      </section>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <section class="col choices">
+        <h2 class="h2">Top Choices</h2>
+        <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link border-0 active"
+              id="home-tab"
+              data-toggle="tab"
+              href="#home"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              Bali
+              <sup class="">128</sup>
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link border-0"
+              id="profile-tab"
+              data-toggle="tab"
+              href="#profile"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              Profile
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link border-0"
+              id="contact-tab"
+              data-toggle="tab"
+              href="#contact"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            <div class="row">
+              <div class="choices__swiper swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="col-md-3 mr-0 swiper-slide">
+                    <div class="card border-0 mb-3">
+                      <div
+                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
+                      ></div>
+                      <div class="card-body px-0">
+                        <h5 class="card-title">Hotel Aqua</h5>
+                        <div class="d-flex align-items-center">
+                          <span class="h6 material-icons mr-2">star star star star star</span>
+                          <span class="h6">5.0</span>
+                          <span class="font-s">・2k reviews</span>
+                        </div>
+                        <p class="card-text">
+                          TWD 2,480
+                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mr-0 swiper-slide">
+                    <div class="card border-0 mb-3">
+                      <div
+                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
+                      ></div>
+                      <div class="card-body px-0">
+                        <h5 class="card-title">Hotel Aqua</h5>
+                        <div class="d-flex align-items-center">
+                          <span class="h6 material-icons mr-2">star star star star star</span>
+                          <span class="h6">5.0</span>
+                          <span class="font-s">・2k reviews</span>
+                        </div>
+                        <p class="card-text">
+                          TWD 2,480
+                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mr-0 swiper-slide">
+                    <div class="card border-0 mb-3">
+                      <div
+                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
+                      ></div>
+                      <div class="card-body px-0">
+                        <h5 class="card-title">Hotel Aqua</h5>
+                        <div class="d-flex align-items-center">
+                          <span class="h6 material-icons mr-2">star star star star star</span>
+                          <span class="h6">5.0</span>
+                          <span class="font-s">・2k reviews</span>
+                        </div>
+                        <p class="card-text">
+                          TWD 2,480
+                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mr-0 swiper-slide">
+                    <div class="card border-0 mb-3">
+                      <div
+                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
+                      ></div>
+                      <div class="card-body px-0">
+                        <h5 class="card-title">Hotel Aqua</h5>
+                        <div class="d-flex align-items-center">
+                          <span class="h6 material-icons mr-2">star star star star star</span>
+                          <span class="h6">5.0</span>
+                          <span class="font-s">・2k reviews</span>
+                        </div>
+                        <p class="card-text">
+                          TWD 2,480
+                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mr-0 swiper-slide">
+                    <div class="card border-0 mb-3">
+                      <div
+                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
+                      ></div>
+                      <div class="card-body px-0">
+                        <h5 class="card-title">Hotel Aqua</h5>
+                        <div class="d-flex align-items-center">
+                          <span class="h6 material-icons mr-2">star star star star star</span>
+                          <span class="h6">5.0</span>
+                          <span class="font-s">・2k reviews</span>
+                        </div>
+                        <p class="card-text">
+                          TWD 2,480
+                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mr-0 swiper-slide">
+                    <div class="card border-0 mb-3">
+                      <div
+                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
+                      ></div>
+                      <div class="card-body px-0">
+                        <h5 class="card-title">Hotel Aqua</h5>
+                        <div class="d-flex align-items-center">
+                          <span class="h6 material-icons mr-2">star star star star star</span>
+                          <span class="h6">5.0</span>
+                          <span class="font-s">・2k reviews</span>
+                        </div>
+                        <p class="card-text">
+                          TWD 2,480
+                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+              <!-- <div class="col-md-3">
+                <div class="card border-0 mb-3">
+                  <div class="bg-cover bg-cover--center choices__card choices__card1 rounded"></div>
+                  <div class="card-body px-0">
+                    <h5 class="card-title">Hotel Aqua</h5>
+                    <div class="d-flex align-items-center">
+                      <span class="h6 material-icons mr-2">star star star star star</span>
+                      <span class="h6">5.0</span>
+                      <span class="font-s">・2k reviews</span>
+                    </div>
+                    <p class="card-text">TWD 2,480<del class="ml-2"><small class="text-muted">TWD 3,980</small></del></p>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-3">
+                  <img src="..." class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Hotel Aqua</h5>
+                    <div>
+                      <span class="material-icons mr-3">star star star star star</span>
+                      <span>5.0</span>
+                      <span>・2k reviews</span>
+                    </div>
+                    <p class="card-text">
+                      TWD 2,480
+                      <del><small class="text-muted">TWD 3,980</small></del>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

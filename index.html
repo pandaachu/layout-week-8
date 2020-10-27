@@ -1,10 +1,55 @@
----
-title: Aloha Index
-layout: ./app/layout/index.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aloha Index</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <header class="header container">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-md navbar-light px-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand m-0" href="#"><img src="./assets/images/ic-logo-aloha.svg" alt=""></a>
+            <a class="btn order-md-3 px-0 font-roboto" href="#">Login</a>
+            <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown  mr-md-5">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span class="material-icons">language</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">中文</a>
+                    <a class="dropdown-item" href="#">English</a>
+                  </div>
+                </li>
+                <li class="nav-item mr-md-5">
+                  <a class="nav-link px-0 font-roboto" href="#">Sign up</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    
 <div class="index">
   <section class="heroBanner position-relative">
     <h2 class="h2 heroBanner__title position-absolute alignCenter font-weight-bold text-white">
@@ -411,3 +456,62 @@ current: index
     </div>
   </div>
 </div>
+
+
+    <section class="subscribe container-fluid bg-secondary text-center">
+      <h2 class="h2 mb-4 font-raleway font-weight-bold">Subscribe for Exclusive Offer</h2>
+      <div class="row justify-content-md-center">
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control form-control-lg border-0" placeholder="Your email address" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-lg btn-primary text-uppercase type="button" id="button-addon2">subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer container d-flex py-4">
+      <div class="text-muted">© 2020 ALOHA, Inc. All rights reserved.</div>
+      <ul class="d-flex mr-auto">
+        <li class="mr-4"><a class="text-muted" href="#">FAQs</a></li>
+        <li class="mr-4"><a class="text-muted" href="#">Terms of use</a></li>
+        <li><a class="text-muted" href="#">Privacy policy</a></li>
+      </ul>
+      <ul class="d-flex">
+        <li class="nav-item dropdown mr-md-5">
+          <a class="nav-link p-0 dropdown-toggle text-muted d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="material-icons">language</span>
+            <span >English</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">中文</a>
+            <a class="dropdown-item" href="#">English</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown mr-md-5">
+          <a class="nav-link p-0 dropdown-toggle text-muted d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="material-icons">attach_money</span>
+            <span>TWD</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">TWD</a>
+            <a class="dropdown-item" href="#">USD</a>
+          </div>
+        </li>
+      </ul>
+    </footer>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Datetimepicker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>

@@ -78,13 +78,14 @@
       <div class="heroBanner__button swiper-button-next"></div>
     </div>
   </section>
+  <!-- searchBar -->
   <div class="container">
     <div class="row justify-content-center">
       <section class="col-lg-10">
         <form class="searchBar d-flex flex-column flex-md-row p-4 rounded-lg">
           <div
             id="destinationHeading"
-            class="searchBar__group rounded btn"
+            class="searchBar__group rounded btn mb-3 mb-lg-0"
             data-toggle="collapse"
             data-target="#destination"
             aria-controls="destination"
@@ -152,7 +153,7 @@
           </div>
           <div
             id="checkTimeHeading"
-            class="searchBar__group rounded btn"
+            class="searchBar__group rounded btn btn mb-3 mb-lg-0"
             data-toggle="collapse"
             data-target="#checkTime"
             aria-controls="checkTime"
@@ -161,7 +162,7 @@
               <!-- <h6 class="h6 text-muted ">Check-in / Check-out</h6> -->
               <!-- <span class="material-icons mr-3">date_range</span> -->
               <input
-                class="searchBar__input font-OpenSans"
+                class="searchBar__input font-openSans"
                 type="text"
                 name="js-datePicker"
                 placeholder="Check-in / Check-out"
@@ -176,7 +177,7 @@
           </div>
           <div
             id="guestsHeading"
-            class="searchBar__group rounded btn"
+            class="searchBar__group rounded btn btn mb-3 mb-lg-0"
             data-toggle="collapse"
             data-target="#guests"
             aria-controls="guests"
@@ -232,229 +233,312 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="btn btn-primary text-uppercase">search</button>
+          <button type="button"  onclick="location.href='result.html'" class="btn btn-primary text-uppercase">search</button>
         </form>
       </section>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <section class="col choices">
-        <h2 class="h2">Top Choices</h2>
-        <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link border-0 active"
-              id="home-tab"
-              data-toggle="tab"
-              href="#home"
-              role="tab"
-              aria-controls="home"
-              aria-selected="true"
-            >
-              Bali
-              <sup class="">128</sup>
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link border-0"
-              id="profile-tab"
-              data-toggle="tab"
-              href="#profile"
-              role="tab"
-              aria-controls="profile"
-              aria-selected="false"
-            >
-              Profile
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link border-0"
-              id="contact-tab"
-              data-toggle="tab"
-              href="#contact"
-              role="tab"
-              aria-controls="contact"
-              aria-selected="false"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-          <div
-            class="tab-pane fade show active"
-            id="home"
-            role="tabpanel"
-            aria-labelledby="home-tab"
+  <!-- choices -->
+  <section class="choices mb-sec-1">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="h2 font-raleway font-weight-bold mb-4">Top Choices</h2>
+          <ul
+            class="nav nav-tabs border-0 mb-3 font-raleway font-weight-bold"
+            id="myTab"
+            role="tablist"
           >
-            <div class="row">
-              <div class="choices__swiper swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="col-md-3 mr-0 swiper-slide">
-                    <div class="card border-0 mb-3">
-                      <div
-                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
-                      ></div>
-                      <div class="card-body px-0">
-                        <h5 class="card-title">Hotel Aqua</h5>
-                        <div class="d-flex align-items-center">
-                          <span class="h6 material-icons mr-2">star star star star star</span>
-                          <span class="h6">5.0</span>
-                          <span class="font-s">・2k reviews</span>
-                        </div>
-                        <p class="card-text">
-                          TWD 2,480
-                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
-                        </p>
-                      </div>
-                    </div>
+            <li class="nav-item border-bottom" role="presentation">
+              <a
+                class="nav-link border-top-0 border-left-0 border-right-0 resetLink resetLink--border active"
+                id="home-tab"
+                data-toggle="tab"
+                href="#home"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+              >
+                Bali
+                <sup class="">128</sup>
+              </a>
+            </li>
+            <li class="nav-item border-bottom" role="presentation">
+              <a
+                class="nav-link border-top-0 border-left-0 border-right-0 resetLink resetLink--border"
+                id="profile-tab"
+                data-toggle="tab"
+                href="#profile"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+              >
+                Okinawa
+                <sup class="">67</sup>
+              </a>
+            </li>
+            <li class="nav-item border-bottom" role="presentation">
+              <a
+                class="nav-link border-top-0 border-left-0 border-right-0 resetLink resetLink--border"
+                id="contact-tab"
+                data-toggle="tab"
+                href="#contact"
+                role="tab"
+                aria-controls="contact"
+                aria-selected="false"
+              >
+                Taipei
+                <sup class="">53</sup>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content" id="myTabContent">
+      <div
+        class="tab-pane fade show active d-flex justify-content-end justify-content-lg-center"
+        id="home"
+        role="tabpanel"
+        aria-labelledby="home-tab"
+      >
+        <div class="choices__swiper swiper-container m-0">
+          <!-- Additional required wrapper -->
+          <div class="choices__swiper__wrapper swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="card border-0 mb-3">
+                <div class="bg-cover bg-cover--center choices__card choices__card1 rounded"></div>
+                <div class="card-body px-0">
+                  <h5 class="card-title font-weight-bold">Hotel Aqua</h5>
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="h6 material-icons mr-2">star star star star star</span>
+                    <span class="h6">5.0</span>
+                    <span class="font-s">・2k reviews</span>
                   </div>
-                  <div class="col-md-3 mr-0 swiper-slide">
-                    <div class="card border-0 mb-3">
-                      <div
-                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
-                      ></div>
-                      <div class="card-body px-0">
-                        <h5 class="card-title">Hotel Aqua</h5>
-                        <div class="d-flex align-items-center">
-                          <span class="h6 material-icons mr-2">star star star star star</span>
-                          <span class="h6">5.0</span>
-                          <span class="font-s">・2k reviews</span>
-                        </div>
-                        <p class="card-text">
-                          TWD 2,480
-                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 mr-0 swiper-slide">
-                    <div class="card border-0 mb-3">
-                      <div
-                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
-                      ></div>
-                      <div class="card-body px-0">
-                        <h5 class="card-title">Hotel Aqua</h5>
-                        <div class="d-flex align-items-center">
-                          <span class="h6 material-icons mr-2">star star star star star</span>
-                          <span class="h6">5.0</span>
-                          <span class="font-s">・2k reviews</span>
-                        </div>
-                        <p class="card-text">
-                          TWD 2,480
-                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 mr-0 swiper-slide">
-                    <div class="card border-0 mb-3">
-                      <div
-                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
-                      ></div>
-                      <div class="card-body px-0">
-                        <h5 class="card-title">Hotel Aqua</h5>
-                        <div class="d-flex align-items-center">
-                          <span class="h6 material-icons mr-2">star star star star star</span>
-                          <span class="h6">5.0</span>
-                          <span class="font-s">・2k reviews</span>
-                        </div>
-                        <p class="card-text">
-                          TWD 2,480
-                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 mr-0 swiper-slide">
-                    <div class="card border-0 mb-3">
-                      <div
-                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
-                      ></div>
-                      <div class="card-body px-0">
-                        <h5 class="card-title">Hotel Aqua</h5>
-                        <div class="d-flex align-items-center">
-                          <span class="h6 material-icons mr-2">star star star star star</span>
-                          <span class="h6">5.0</span>
-                          <span class="font-s">・2k reviews</span>
-                        </div>
-                        <p class="card-text">
-                          TWD 2,480
-                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3 mr-0 swiper-slide">
-                    <div class="card border-0 mb-3">
-                      <div
-                        class="bg-cover bg-cover--center choices__card choices__card1 rounded"
-                      ></div>
-                      <div class="card-body px-0">
-                        <h5 class="card-title">Hotel Aqua</h5>
-                        <div class="d-flex align-items-center">
-                          <span class="h6 material-icons mr-2">star star star star star</span>
-                          <span class="h6">5.0</span>
-                          <span class="font-s">・2k reviews</span>
-                        </div>
-                        <p class="card-text">
-                          TWD 2,480
-                          <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <p class="card-text">
+                    TWD 2,480
+                    <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
+                  </p>
                 </div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
               </div>
-              <!-- <div class="col-md-3">
-                <div class="card border-0 mb-3">
-                  <div class="bg-cover bg-cover--center choices__card choices__card1 rounded"></div>
-                  <div class="card-body px-0">
-                    <h5 class="card-title">Hotel Aqua</h5>
-                    <div class="d-flex align-items-center">
-                      <span class="h6 material-icons mr-2">star star star star star</span>
-                      <span class="h6">5.0</span>
-                      <span class="font-s">・2k reviews</span>
-                    </div>
-                    <p class="card-text">TWD 2,480<del class="ml-2"><small class="text-muted">TWD 3,980</small></del></p>
+            </div>
+            <div class="swiper-slide">
+              <div class="card border-0 mb-3">
+                <div class="bg-cover bg-cover--center choices__card choices__card2 rounded"></div>
+                <div class="card-body px-0">
+                  <h5 class="card-title font-weight-bold">Mr. Kawasaki Inn</h5>
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="h6 material-icons mr-2">star star star star</span>
+                    <span class="h6">4.0</span>
+                    <span class="font-s">・500 reviews</span>
                   </div>
+                  <p class="card-text">TWD 3,380</p>
                 </div>
-              </div> -->
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card border-0 mb-3">
+                <div class="bg-cover bg-cover--center choices__card choices__card3 rounded"></div>
+                <div class="card-body px-0">
+                  <h5 class="card-title font-weight-bold">Weekly Paradise</h5>
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="h6 material-icons mr-2">star star star star</span>
+                    <span class="h6">4.0</span>
+                    <span class="font-s">・470 reviews</span>
+                  </div>
+                  <p class="card-text">TWD 4,780</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card border-0 mb-3">
+                <div class="bg-cover bg-cover--center choices__card choices__card4 rounded"></div>
+                <div class="card-body px-0">
+                  <h5 class="card-title font-weight-bold">Beast Hotel</h5>
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="h6 material-icons mr-2">star star star star</span>
+                    <span class="h6">4.0</span>
+                    <span class="font-s">・283 reviews</span>
+                  </div>
+                  <p class="card-text">TWD 1,980</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card border-0 mb-3">
+                <div class="bg-cover bg-cover--center choices__card choices__card1 rounded"></div>
+                <div class="card-body px-0">
+                  <h5 class="card-title font-weight-bold">Hotel Aqua</h5>
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="h6 material-icons mr-2">star star star star star</span>
+                    <span class="h6">5.0</span>
+                    <span class="font-s">・2k reviews</span>
+                  </div>
+                  <p class="card-text">
+                    TWD 2,480
+                    <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card border-0 mb-3">
+                <div class="bg-cover bg-cover--center choices__card choices__card1 rounded"></div>
+                <div class="card-body px-0">
+                  <h5 class="card-title font-weight-bold">Hotel Aqua</h5>
+                  <div class="d-flex align-items-center mb-2">
+                    <span class="h6 material-icons mr-2">star star star star star</span>
+                    <span class="h6">5.0</span>
+                    <span class="font-s">・2k reviews</span>
+                  </div>
+                  <p class="card-text">
+                    TWD 2,480
+                    <del class="ml-2"><small class="text-muted">TWD 3,980</small></del>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card mb-3">
-                  <img src="..." class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <h5 class="card-title">Hotel Aqua</h5>
-                    <div>
-                      <span class="material-icons mr-3">star star star star star</span>
-                      <span>5.0</span>
-                      <span>・2k reviews</span>
-                    </div>
-                    <p class="card-text">
-                      TWD 2,480
-                      <del><small class="text-muted">TWD 3,980</small></del>
-                    </p>
-                  </div>
-                </div>
-              </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev d-none"></div>
+          <div class="swiper-button-next d-none d-md-flex"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Popular Destinations -->
+  <section class="container popular mb-sec-1">
+    <div class="row">
+      <div class="col">
+        <h2 class="h2 font-raleway font-weight-bold mb-4">Popular Destinations</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 popular__item mb-3">
+        <div class="card border-0 rounded-lg gradient gradient--left text-white">
+          <img src="./assets/images/popular/osaka.jpg" class="card-img" alt="osaka">
+          <div class="card-img-overlay z-index-2 d-flex justify-content-between align-items-center">
+            <div>
+              <p class="card-text font-s">JAPAN</p>
+              <h4 class="card-title m-0">Osaka</h4>
             </div>
+            <span class="material-icons">
+              keyboard_arrow_down
+            </span> 
           </div>
         </div>
-      </section>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 popular__item mb-3">
+        <div class="card border-0 rounded-lg gradient gradient--left text-white">
+          <img src="./assets/images/popular/kyoto.jpg" class="card-img" alt="kyoto">
+          <div class="card-img-overlay z-index-2 d-flex justify-content-between align-items-center">
+            <div>
+              <p class="card-text font-s">JAPAN</p>
+              <h4 class="card-title m-0">Kyoto</h4>
+            </div>
+            <span class="material-icons">
+              keyboard_arrow_down
+            </span> 
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 popular__item mb-3">
+        <div class="card border-0 rounded-lg gradient gradient--left text-white">
+          <img src="./assets/images/popular/reykjavík.jpg" class="card-img" alt="reykjavík">
+          <div class="card-img-overlay z-index-2 d-flex justify-content-between align-items-center">
+            <div>
+              <p class="card-text font-s text-uppercase">iceland</p>
+              <h4 class="card-title m-0">Reykjavík</h4>
+            </div>
+            <span class="material-icons">
+              keyboard_arrow_down
+            </span> 
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 popular__item mb-3">
+        <div class="card border-0 rounded-lg gradient gradient--left text-white">
+          <img src="./assets/images/popular/paris.jpg" class="card-img" alt="paris">
+          <div class="card-img-overlay z-index-2 d-flex justify-content-between align-items-center">
+            <div>
+              <p class="card-text font-s text-uppercase">France</p>
+              <h4 class="card-title m-0">Paris</h4>
+            </div>
+            <span class="material-icons">
+              keyboard_arrow_down
+            </span> 
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 popular__item mb-3">
+        <div class="card border-0 rounded-lg gradient gradient--left text-white">
+          <img src="./assets/images/popular/roma.jpg" class="card-img" alt="roma">
+          <div class="card-img-overlay z-index-2 d-flex justify-content-between align-items-center">
+            <div>
+              <p class="card-text font-s text-uppercase">Italy</p>
+              <h4 class="card-title m-0">Roma</h4>
+            </div>
+            <span class="material-icons">
+              keyboard_arrow_down
+            </span> 
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 popular__item mb-3">
+        <div class="card border-0 rounded-lg gradient gradient--left text-white">
+          <img src="./assets/images/popular/bangkok.jpg" class="card-img" alt="bangkok">
+          <div class="card-img-overlay z-index-2 d-flex justify-content-between align-items-center">
+            <div>
+              <p class="card-text font-s text-uppercase">Thailand</p>
+              <h4 class="card-title m-0">Bangkok</h4>
+            </div>
+            <span class="material-icons">
+              keyboard_arrow_down
+            </span> 
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+  <!-- Get Inspiration -->
+  <section class="container inspiration mb-sec-1">
+    <div class="row">
+      <div class="col d-flex justify-content-between mb-4">
+        <h2 class="h2 font-raleway font-weight-bold">Get Inspiration</h2>
+        <button type="button" class="btn btn-outline-primary my-auto">see more</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="inspiration__card card border-0">
+          <div class="inspiration__card__img inspiration__card__img1 rounded-lg card-img-top bg-cover bg-cover--center"></div>
+          <div class="card-body px-0">
+            <h4 class="h4 card-title font-raleway font-weight-bold mb-2">The Fifth Most Visited Country</h4>
+            <p class="card-text font-openSans text-muted">Italy is the fifth most visited country in the world, with a total of 52.3 million…</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="inspiration__card card border-0">
+          <div class="inspiration__card__img inspiration__card__img2 rounded-lg card-img-top bg-cover bg-cover--center"></div>
+          <div class="card-body px-0">
+            <h4 class="h4 card-title font-raleway font-weight-bold mb-2">Visit Thailand for Bangkok</h4>
+            <p class="card-text font-openSans text-muted">Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="inspiration__card card border-0">
+          <div class="inspiration__card__img inspiration__card__img3 rounded-lg card-img-top bg-cover bg-cover--center"></div>
+          <div class="card-body px-0">
+            <h4 class="h4 card-title font-raleway font-weight-bold mb-2">Lord of the Rings Tour</h4>
+            <p class="card-text font-openSans text-muted">The national cuisine has been described as Pacific Rim, incorporating the native Māori…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 
 
@@ -473,14 +557,14 @@
     </section>
 
     <!-- footer -->
-    <footer class="footer container d-flex py-4">
-      <div class="text-muted">© 2020 ALOHA, Inc. All rights reserved.</div>
-      <ul class="d-flex mr-auto">
+    <footer class="footer container d-flex flex-md-row flex-column-reverse justify-content-center py-4">
+      <div class="text-muted text-center mr-md-5">© 2020 ALOHA, Inc. All rights reserved.</div>
+      <ul class="d-flex mr-lg-auto justify-content-center">
         <li class="mr-4"><a class="text-muted" href="#">FAQs</a></li>
         <li class="mr-4"><a class="text-muted" href="#">Terms of use</a></li>
         <li><a class="text-muted" href="#">Privacy policy</a></li>
       </ul>
-      <ul class="d-flex">
+      <ul class="d-lg-flex d-none">
         <li class="nav-item dropdown mr-md-5">
           <a class="nav-link p-0 dropdown-toggle text-muted d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">

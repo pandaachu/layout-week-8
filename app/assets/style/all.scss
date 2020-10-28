@@ -12,12 +12,15 @@
 // utils
 @import "utils/background";
 @import "utils/align";
+@import "utils/gradient";
+@import "utils/z-index";
 
 // components
 @import "components/subscribe";
 @import "components/swiper";
 @import "components/search-bar";
 @import "components/date-range-picker";
+@import "components/link";
 
 // pages
 @import "pages/index"

@@ -2,7 +2,8 @@
   @return ($unit / $font-size-base) * 1rem;
 }
 
-$font-h2: toRem(48px);
+$font-h2-md: toRem(48px);
+$font-h2: toRem(24px);
 $font-h6: toRem(16px);
 $font-l: toRem(64px);
 $font-m: toRem(24px);
@@ -14,7 +15,7 @@ $font-s: toRem(12px);
 .font-raleway{
   font-family: 'Raleway', sans-serif;
 }
-.font-OpenSans{
+.font-openSans{
   font-family: 'Open Sans', sans-serif;
 }
 html, body{
@@ -24,6 +25,9 @@ html, body{
 
 .h2{
   font-size: $font-h2;
+  @include media-breakpoint-up(lg) {
+    font-size: $font-h2-md;
+  }
 }
 .h6{
   font-size: $font-h6;

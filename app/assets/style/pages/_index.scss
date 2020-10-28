@@ -1,34 +1,44 @@
-.index{
-  .heroBanner{
-    &__item1{
+.index {
+  .heroBanner {
+    &__item1 {
       background-image: url(../images/slider/andrea-leopardi-3MTQ1HXQn-Q-unsplash.jpg);
     }
-    &__item2{
+    &__item2 {
       background-image: url(../images/slider/taylor-simpson-EWcocEYrkAk-unsplash.jpg);
     }
-    &__item3{
+    &__item3 {
       background-image: url(../images/slider/taylor-simpson-GdwGZbU8PgI-unsplash.jpg);
     }
-    &__item4{
+    &__item4 {
       background-image: url(../images/slider/taylor-simpson-GxDo5JXcErw-unsplash.jpg);
     }
-    &__title{
+    &__title {
       z-index: 10;
     }
-    &__button{
+    &__button {
       @include media-breakpoint-up(lg) {
         padding-right: 20%;
         padding-left: 20%;
       }
     }
+    &__swiper {
+      width: 100%;
+      height: 320px;
+      @include media-breakpoint-up(lg) {
+        height: 300px;
+      }
+      @include media-breakpoint-up(md) {
+        height: 320px;
+      }
+    }
   }
-  .searchBar{
+  .searchBar {
     position: relative;
     transform: translateY(-50%);
     z-index: 2;
   }
-  .choices{
-    &__card{
+  .choices {
+    &__card {
       height: 164px;
       @include media-breakpoint-up(md) {
         height: 185px;
@@ -37,25 +47,71 @@
         height: 175px;
       }
     }
-    &__card1{
+    &__card1 {
       background-image: url(../images/hotel/siravit-phiwondee-xLor7ShIUAc-unsplash.jpg);
     }
-    &__card2{
+    &__card2 {
       background-image: url(../images/hotel/taylor-simpson-xfAaM-PXYVo-unsplash.jpg);
     }
-    &__card3{
+    &__card3 {
       background-image: url(../images/hotel/jared-rice-AhiUnolb7cg-unsplash.jpg);
     }
-    &__card4{
+    &__card4 {
       background-image: url(../images/hotel/daniel-dinuzzo-qCjolcMFaLI-unsplash.jpg);
     }
+    &__swiper {
+      width: 98%;
+      .swiper-button-next{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 3rem;
+        background-color: $secondary;
+        &::after{
+          color: $dark;
+          font-size: 1rem;
+          font-weight: bold;
+        }
+      }
+      @include media-breakpoint-up(md) {
+        width: 95%;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 1110px;
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+    }
   }
-  .choices__swiper{
-    width: 100%;
-    .swiper-wrapper {
-      position: absolute;
-      left: 0;
-      top: 0;
+  .popular{
+    .card{
+      height: 78px;
+    }
+    &__item{
+      .card-text{
+        color: #FFFFFF98;
+      }
+    }
+  }
+  .inspiration{
+    &__card{
+      &__img{
+        height: 181px;
+        @include media-breakpoint-up(md) {
+          height: 158px;
+        }
+        @include media-breakpoint-up(lg) {
+          height: 263px;
+        }
+      }
+      &__img1{
+        background-image: url(../images/inspiration/dario-veronesi-lUO-BjCiZEA-unsplash.jpg);
+      }
+      &__img2{
+        background-image: url(../images/inspiration/kiril-dobrev-MB1YI7cLOG4-unsplash.jpg);
+      }
+      &__img3{
+        background-image: url(../images/inspiration/jeff-finley-bK8Wlaq7NaA-unsplash.jpg);
+      }
     }
   }
 }

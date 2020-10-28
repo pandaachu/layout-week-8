@@ -1,0 +1,13 @@
+.resetLink{
+  color: $gray-800;
+  &.active{
+    color: $primary;
+    
+  }
+  &--border{
+    border-bottom: 2px solid $gray-800 ;
+    &.active{
+      border-bottom: 2px solid $primary;
+    }
+  }
+}

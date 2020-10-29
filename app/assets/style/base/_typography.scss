@@ -4,6 +4,8 @@
 
 $font-h2-md: toRem(48px);
 $font-h2: toRem(24px);
+$font-h3-md: toRem(32px);
+$font-h3: toRem(24px);
 $font-h6: toRem(16px);
 $font-l: toRem(64px);
 $font-m: toRem(24px);
@@ -27,6 +29,12 @@ html, body{
   font-size: $font-h2;
   @include media-breakpoint-up(lg) {
     font-size: $font-h2-md;
+  }
+}
+.h3{
+  font-size: $font-h3;
+  @include media-breakpoint-up(lg) {
+    font-size: $font-h3-md;
   }
 }
 .h6{

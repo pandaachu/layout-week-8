@@ -2352,9 +2352,9 @@ select.form-control:focus::-ms-value {
 }
 
 .col-form-label-lg {
-  padding-top: calc(0.5rem + 1px);
-  padding-bottom: calc(0.5rem + 1px);
-  font-size: 1.25rem;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -2392,9 +2392,9 @@ select.form-control:focus::-ms-value {
 }
 
 .form-control-lg {
-  height: calc(1.5em + 1rem + 2px);
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  height: calc(1.5em + 36px);
+  padding: 17px 1rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -3576,8 +3576,8 @@ fieldset:disabled a.btn {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  padding: 17px 1rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -4172,7 +4172,7 @@ input[type="button"].btn-block {
 
 .input-group-lg > .form-control:not(textarea),
 .input-group-lg > .custom-select {
-  height: calc(1.5em + 1rem + 2px);
+  height: calc(1.5em + 36px);
 }
 
 .input-group-lg > .form-control,
@@ -4181,8 +4181,8 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  padding: 17px 1rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.3rem;
 }
@@ -4451,11 +4451,11 @@ input[type="button"].btn-block {
 }
 
 .custom-select-lg {
-  height: calc(1.5em + 1rem + 2px);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  height: calc(1.5em + 36px);
+  padding-top: 17px;
+  padding-bottom: 17px;
   padding-left: 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .custom-file {
@@ -8937,6 +8937,10 @@ button.bg-gray:focus {
   width: auto !important;
 }
 
+.w-35 {
+  width: 35% !important;
+}
+
 .h-25 {
   height: 25% !important;
 }
@@ -8955,6 +8959,10 @@ button.bg-gray:focus {
 
 .h-auto {
   height: auto !important;
+}
+
+.h-35 {
+  height: 35% !important;
 }
 
 .mw-100 {
@@ -11482,6 +11490,10 @@ img {
   display: block;
 }
 
+.navbar-toggler {
+  border: 0;
+}
+
 .font-roboto {
   font-family: 'Open Sans', sans-serif;
 }
@@ -11506,6 +11518,16 @@ html, body {
 @media (min-width: 992px) {
   .h2 {
     font-size: 48px;
+  }
+}
+
+.h3 {
+  font-size: 24px;
+}
+
+@media (min-width: 992px) {
+  .h3 {
+    font-size: 32px;
   }
 }
 
@@ -11657,6 +11679,133 @@ html, body {
 
 .searchBar input:focus, .searchBar input:active {
   outline: none;
+}
+
+.resultSearchBar input:active, .resultSearchBar input:focus {
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 0;
+  background-color: transparent;
+}
+
+.resultSearchBar__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 0.5rem;
+  position: relative;
+}
+
+.resultSearchBar__item:nth-of-type(1)::after, .resultSearchBar__item:nth-of-type(2)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: white;
+  width: 1px;
+  height: 70%;
+}
+
+@media (min-width: 768px) {
+  .resultSearchBar__item:nth-of-type(1)::after, .resultSearchBar__item:nth-of-type(2)::after {
+    content: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .resultSearchBar__item {
+    padding-left: 0;
+  }
+}
+
+.resultSearchBar__input {
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .resultSearchBar__input:not(:last-child) {
+    margin-right: 2%;
+    background-color: #fff;
+  }
+}
+
+@media (min-width: 992px) {
+  .resultSearchBar__input:not(:last-child) {
+    margin-right: 3%;
+  }
+}
+
+.resultSearchBar__title {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.resultSearchBar__text {
+  font-size: 12px;
+  height: calc(1.5em + 0.75rem + 2px);
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .resultSearchBar__text {
+    font-size: 12px;
+    height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .resultSearchBar__text {
+    font-size: 14px;
+  }
+}
+
+.resultSearchBar__input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .resultSearchBar__input-group {
+    margin-right: 2%;
+    background-color: white;
+  }
+}
+
+@media (min-width: 992px) {
+  .resultSearchBar__input-group {
+    margin-right: 3%;
+  }
+}
+
+.resultSearchBar__input-group .resultSearchBar__input:nth-of-type(2) {
+  position: relative;
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .resultSearchBar__input-group .resultSearchBar__input:nth-of-type(2)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color: #dee2e6;
+    width: 1px;
+    height: 100%;
+  }
+}
+
+.resultSearchBar__btn {
+  height: 100%;
 }
 
 .daterangepicker {

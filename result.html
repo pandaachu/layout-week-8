@@ -10,13 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
+    <!-- header -->
     <header class="header container">
       <div class="row">
         <div class="col">
@@ -48,20 +49,75 @@
         </div>
       </div>
     </header>
+    <section class="resultSearchBar bg-secondary py-md-4 py-0">
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex">
+          <div class="resultSearchBar__item resultSearchBar__input d-flex align-items-center rounded-lg py-3">
+            <span class="resultSearchBar__icon material-icons d-none d-md-block px-lg-3 px-md-2">location_on</span>
+            <div class="d-flex flex-column">
+              <span class="resultSearchBar__title text-uppercase d-none d-md-block">Destination</span>
+              <input type="text" class="resultSearchBar__text form-control p-0 border-0 rounded-lg" aria-label="Sizing example input" placeholder="Bangkok, Thailand">
+            </div>
+          </div>
+          <div class="resultSearchBar__item resultSearchBar__input d-lg-none d-flex align-items-center rounded-lg py-3">
+            <span class="resultSearchBar__icon material-icons d-none d-md-block px-lg-3 px-md-2">date_range</span>
+            <div class="d-flex flex-column">
+              <span class="resultSearchBar__title text-uppercase d-none d-md-block">Check-in / out</span>
+              <input type="text" class="resultSearchBar__text form-control p-0 border-0 rounded-lg" aria-label="Sizing example input" placeholder="17 June - 19 June">
+            </div>
+          </div>
+          <div class="resultSearchBar__item resultSearchBar__input-group d-lg-flex d-none rounded-lg py-3">
+            <div class="resultSearchBar__input d-flex align-items-center">
+              <span class="resultSearchBar__icon material-icons d-none d-md-block px-lg-3 px-md-2">date_range</span>
+              <div class="d-md-flex flex-md-column">
+                <span class="resultSearchBar__title text-uppercase d-none d-md-block">Destination</span>
+                <input type="text" class="resultSearchBar__text form-control p-0 border-0 rounded-lg" aria-label="Sizing example input" placeholder="17 June">
+              </div>
+            </div>
+            <div class="resultSearchBar__input d-flex align-items-center">
+              <div class="d-flex flex-column">
+                <span class="resultSearchBar__title text-uppercase d-none d-md-block">Destination</span>
+                <input type="text" class="resultSearchBar__text form-control p-0 border-0 rounded-lg" aria-label="Sizing example input" placeholder="19 June">
+              </div>
+            </div>
+          </div>
+          <div class="resultSearchBar__item resultSearchBar__input d-flex align-items-center rounded-lg py-3">
+            <span class="resultSearchBar__icon material-icons d-none d-md-block px-lg-3 px-md-2">person</span>
+            <div class="d-flex flex-column">
+              <span class="resultSearchBar__title text-uppercase d-none d-md-block">Guests</span>
+              <input type="text" class="resultSearchBar__text form-control p-0 border-0 rounded-lg" aria-label="Sizing example input" placeholder="2 adults・1 room"">
+            </div>
+          </div>
+          <button class="resultSearchBar__btn btn btn-primary text-uppercase d-none d-md-block" type="button">search</button>
+        </div>
+      </div>
+    </section>
 
     
-<div class="result">
+<div class="result container">
+  <div class="row">
+    <div class="col">
+      <h3 class="h3">Bangkok <sup>3,240</sup></h3>
+    </div>
+    <div class="col"></div>
+  </div>
 </div>
 
 
-    <section class="subscribe container-fluid bg-secondary text-center">
-      <h2 class="h2 mb-4 font-raleway font-weight-bold">Subscribe for Exclusive Offer</h2>
-      <div class="row justify-content-md-center">
-        <div class="col-md-6">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control form-control-lg border-0" placeholder="Your email address" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-lg btn-primary text-uppercase type="button" id="button-addon2">subscribe</button>
+    <!-- subscribe -->
+    <section class="subscribe bg-secondary text-center py-4">
+      <div class="container">
+        <div class="row flex-column flex-md-row align-items-center">
+          <div class="col-lg-5 col-md-4 col">
+            <h3 class="h3 font-raleway font-weight-bold mb-3 mb-md-0">Subscribe for Exclusive Offer</h2>
+          </div>
+          <div class="col-lg-7 col-md-8 col">
+            <div class="input-group">
+              <input type="text" class="form-control form-control-lg border-0" placeholder="Your email address" aria-label="email" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-lg btn-primary text-uppercase type="button">subscribe</button>
+              </div>
             </div>
           </div>
         </div>

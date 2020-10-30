@@ -8,7 +8,7 @@ $font-h3-md: toRem(32px);
 $font-h3: toRem(24px);
 $font-h6: toRem(16px);
 $font-l: toRem(64px);
-$font-m: toRem(24px);
+$font-m: toRem(14px);
 $font-s: toRem(12px);
 
 .font-roboto{
@@ -44,5 +44,8 @@ html, body{
   line-height:$font-h6 ;
 }
 .font-s{
-  font-size:toRem(12px);
+  font-size:$font-s;
+}
+.font-m{
+  font-size:$font-m;
 }

@@ -1,0 +1,33 @@
+.star{
+  margin-right: 0.3rem;
+  &::before{
+    font-family: 'Material Icons';
+    font-size: 1.2rem;
+    color: #000;
+  }
+  &--1{
+    &::before{
+      content: 'star';
+    }
+  }
+  &--2{
+    &::before{
+      content: 'star star';
+    }
+  }
+  &--3{
+    &::before{
+      content: 'star star star';
+    }
+  }
+  &--4{
+    &::before{
+      content: 'star star star star';
+    }
+  }
+  &--5{
+    &::before{
+      content: 'star star star star star';
+    }
+  }
+}

@@ -21,6 +21,9 @@
 @import "components/search-bar";
 @import "components/date-range-picker";
 @import "components/link";
+@import "components/search-side-bar";
+@import "components/star";
 
 // pages
-@import "pages/index"
+@import "pages/index";
+@import "pages/result"

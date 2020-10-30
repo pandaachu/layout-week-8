@@ -1,0 +1,49 @@
+.searchSideBar{
+  background-color: $secondary;
+  padding: 1.5rem;
+  ul>li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  &__item{
+    &:not(:last-child){
+      border-bottom: 1px solid #fff;
+      margin-bottom: 25px;
+    }
+  }
+  &__title{
+    margin-bottom: 17px;
+    font-weight: bold;
+  }
+  &__text{
+    color: $gray-800;
+    display: flex;
+    align-items: center;
+    
+  }
+  &__scrollRange{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &__start, &__end{
+      width: 1rem;
+      height: 1rem;
+      border-radius: 1rem;
+      background-color: $primary;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    &__start{
+      left: 0;
+    }
+    &__end{
+      right: 0;
+    }
+    &__line{
+      height: 2px;
+      width: 95%;
+      background-color: $primary;
+    }
+  }
+}

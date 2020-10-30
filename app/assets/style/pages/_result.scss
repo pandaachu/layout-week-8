@@ -1,0 +1,41 @@
+.result{
+  a{
+    transition: all 0.5s;
+    color: $dark;
+    &.active{
+      color: $primary;
+    }
+    &:hover{
+      color: lighten($primary, 20%);
+    }
+  }
+  .hotelsDetails{
+    &__filter{
+      @include media-breakpoint-up(lg) {
+        height: 38px;
+      }
+    }
+    &__img{
+      height: 175px;
+    }
+    &__swiper{
+      border-top-left-radius: 0.5rem;
+      border-bottom-left-radius: 0.5rem;
+      transition: all 1s;
+      &:hover{
+        .hotelsDetails__button{
+          display: flex;
+        }
+      }
+    }
+    &__button{
+      transition: all 0.5s;
+      display: none;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 1.8rem;
+      top: 57%;
+    }
+    
+  }
+}

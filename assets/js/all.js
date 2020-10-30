@@ -41,6 +41,17 @@ var mySwiper = new Swiper('.choices__swiper', {
       spaceBetween: 30
     }
   }
+});
+var mySwiper = new Swiper('.hotelsDetails__swiper', {
+  // autoplay: true,
+  speed: 1000,
+  // spaceBetween: 100,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
 }); // date range picker
 
 $(document).ready(function () {

@@ -1,3 +1,21 @@
+.full-width-row {
+  @include media-breakpoint-down(sm) {
+    padding-left: 0 ;
+    padding-right: 0 ;
+  }
+}
+.customer-no-gutters{
+  @include media-breakpoint-down(sm){
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.customer-no-gutters > .col, .customer-no-gutters  > [class*="col-"] {
+  @include media-breakpoint-down(sm){
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
 .result{
   a{
     transition: all 0.5s;
@@ -16,12 +34,19 @@
       }
     }
     &__img{
-      height: 175px;
+      height: 150px;
+      @include media-breakpoint-up(md) {
+        height: 175px;
+      }
     }
     &__swiper{
-      border-top-left-radius: 0.5rem;
-      border-bottom-left-radius: 0.5rem;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
       transition: all 1s;
+      @include media-breakpoint-up(md) {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
       &:hover{
         .hotelsDetails__button{
           display: flex;
@@ -36,6 +61,59 @@
       border-radius: 1.8rem;
       top: 57%;
     }
-    
+    .swiper-button-next, .swiper-button-prev{
+      background-color: $secondary;
+      &::after{
+        color: $dark;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+    &__card{
+      &:not(:last-child){
+        border-bottom: $secondary 4px solid;
+        @include media-breakpoint-up(md) {
+          border-bottom: $secondary 1px solid
+        }
+      }
+      .card-body{
+        @include media-breakpoint-down(sm) {
+          padding: 0.5rem;
+        }
+      }
+      &__starText{
+        font-size: 12px;
+        @include media-breakpoint-up(lg) {
+          font-size: 14px;
+        }
+      }
+      &__title{
+        font-size: 16px;
+        @include media-breakpoint-up(lg) {
+          font-size: 20px;
+        }
+      }
+      &__price{
+        font-size: 16px;
+        @include media-breakpoint-up(lg) {
+          font-size: 24px;
+        }
+      }
+      &__price--del{
+        font-size: 12px;
+        @include media-breakpoint-up(md) {
+          font-size: 14px;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 16px;
+        }
+      }
+      &__room{
+        font-size: 14px;
+        @include media-breakpoint-up(lg) {
+          font-size: 16px;
+        }
+      }
+    }
   }
 }

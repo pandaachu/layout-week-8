@@ -1,0 +1,40 @@
+.customerPagination{
+  display: flex;
+  justify-content: space-between;
+  &__group{
+    display: flex;
+    .customerPagination__item{
+      &.active, &:hover{
+        background-color: $white;
+      }
+    }
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.3rem;
+  }
+  
+  &__link{
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    min-width: 2.5rem;
+    color: $gray-900;
+    font-weight: bold;
+  }
+  &__control{
+    background-color: $primary;
+    color: $white;
+    &:hover{
+      color: $secondary;
+    }
+    &.disabled{
+      background-color: transparent;
+      color: $primary;
+      border: 1px solid $primary;
+      pointer-events: none;
+    }
+  }
+}

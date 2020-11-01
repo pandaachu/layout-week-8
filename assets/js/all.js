@@ -52,9 +52,24 @@ var mySwiper = new Swiper('.hotelsDetails__swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   }
-}); // date range picker
-
+});
 $(document).ready(function () {
+  // modal
+  if ($(window).width() > 767) {
+    // $('#exampleModalLong').modal('show')
+    $('#exampleModalLong').removeClass('modal');
+  }
+
+  if ($(window).width() <= 767) {
+    $('#exampleModalLong').modal('hide');
+    $('#exampleModalLong').addClass('modal fade'); // btn-modal
+
+    $('#btn-modal').click(function () {
+      $('#exampleModalLong').modal('show');
+    });
+  } // date range picker
+
+
   var dates = new Date();
   var beginTimeStore = dates.getFullYear() + '-' + (dates.getMonth() + 1) + '-' + dates.getDate(); // 獲取當前日期
 

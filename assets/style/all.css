@@ -11976,6 +11976,63 @@ html, body {
   content: 'star star star star star';
 }
 
+.customerPagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.customerPagination__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.customerPagination__group .customerPagination__item.active, .customerPagination__group .customerPagination__item:hover {
+  background-color: #fff;
+}
+
+.customerPagination__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+
+.customerPagination__link {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  min-width: 2.5rem;
+  color: #000000DE;
+  font-weight: bold;
+}
+
+.customerPagination__control {
+  background-color: #6C51E2;
+  color: #fff;
+}
+
+.customerPagination__control:hover {
+  color: #F1F0F8;
+}
+
+.customerPagination__control.disabled {
+  background-color: transparent;
+  color: #6C51E2;
+  border: 1px solid #6C51E2;
+  pointer-events: none;
+}
+
 .index .heroBanner__item1 {
   background-image: url(../images/slider/andrea-leopardi-3MTQ1HXQn-Q-unsplash.jpg);
 }
@@ -12127,6 +12184,10 @@ html, body {
   background-image: url(../images/inspiration/jeff-finley-bK8Wlaq7NaA-unsplash.jpg);
 }
 
+.modal-backdrop {
+  display: none;
+}
+
 @media (max-width: 767.98px) {
   .full-width-row {
     padding-left: 0;
@@ -12148,38 +12209,69 @@ html, body {
   }
 }
 
-.result a {
+.result {
+  margin-bottom: 4.5rem;
+}
+
+.result__filter a {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
   color: #000;
 }
 
-.result a.active {
+.result__filter a.active {
   color: #6C51E2;
 }
 
-.result a:hover {
+.result__filter a:hover {
   color: #b6a8f1;
 }
 
-@media (min-width: 992px) {
-  .result .hotelsDetails__filter {
-    height: 38px;
+.result__modal {
+  background-color: #F1F0F8;
+}
+
+@media (min-width: 768px) {
+  .result__modal {
+    background-color: transparent;
   }
 }
 
-.result .hotelsDetails__img {
+@media (max-width: 767.98px) {
+  .result__modal__body {
+    margin-bottom: 20vh;
+    margin-top: 63px;
+  }
+}
+
+.result__modal__footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+  border: 0;
+  padding: 0.75rem;
+  height: 20vh;
+}
+
+.result__modal__btn {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  display: block;
+}
+
+.result__search .hotelsDetails__img {
   height: 150px;
 }
 
 @media (min-width: 768px) {
-  .result .hotelsDetails__img {
+  .result__search .hotelsDetails__img {
     height: 175px;
   }
 }
 
-.result .hotelsDetails__swiper {
+.result__search .hotelsDetails__swiper {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   -webkit-transition: all 1s;
@@ -12188,19 +12280,19 @@ html, body {
 }
 
 @media (min-width: 768px) {
-  .result .hotelsDetails__swiper {
+  .result__search .hotelsDetails__swiper {
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
   }
 }
 
-.result .hotelsDetails__swiper:hover .hotelsDetails__button {
+.result__search .hotelsDetails__swiper:hover .hotelsDetails__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.result .hotelsDetails__button {
+.result__search .hotelsDetails__button {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -12211,84 +12303,84 @@ html, body {
   top: 57%;
 }
 
-.result .hotelsDetails .swiper-button-next, .result .hotelsDetails .swiper-button-prev {
+.result__search .hotelsDetails .swiper-button-next, .result__search .hotelsDetails .swiper-button-prev {
   background-color: #F1F0F8;
 }
 
-.result .hotelsDetails .swiper-button-next::after, .result .hotelsDetails .swiper-button-prev::after {
+.result__search .hotelsDetails .swiper-button-next::after, .result__search .hotelsDetails .swiper-button-prev::after {
   color: #000;
   font-size: 1rem;
   font-weight: bold;
 }
 
-.result .hotelsDetails__card:not(:last-child) {
+.result__search .hotelsDetails__card:not(:last-child) {
   border-bottom: #F1F0F8 4px solid;
 }
 
 @media (min-width: 768px) {
-  .result .hotelsDetails__card:not(:last-child) {
+  .result__search .hotelsDetails__card:not(:last-child) {
     border-bottom: #F1F0F8 1px solid;
   }
 }
 
 @media (max-width: 767.98px) {
-  .result .hotelsDetails__card .card-body {
+  .result__search .hotelsDetails__card .card-body {
     padding: 0.5rem;
   }
 }
 
-.result .hotelsDetails__card__starText {
+.result__search .hotelsDetails__card__starText {
   font-size: 12px;
 }
 
 @media (min-width: 992px) {
-  .result .hotelsDetails__card__starText {
+  .result__search .hotelsDetails__card__starText {
     font-size: 14px;
   }
 }
 
-.result .hotelsDetails__card__title {
+.result__search .hotelsDetails__card__title {
   font-size: 16px;
 }
 
 @media (min-width: 992px) {
-  .result .hotelsDetails__card__title {
+  .result__search .hotelsDetails__card__title {
     font-size: 20px;
   }
 }
 
-.result .hotelsDetails__card__price {
+.result__search .hotelsDetails__card__price {
   font-size: 16px;
 }
 
 @media (min-width: 992px) {
-  .result .hotelsDetails__card__price {
+  .result__search .hotelsDetails__card__price {
     font-size: 24px;
   }
 }
 
-.result .hotelsDetails__card__price--del {
+.result__search .hotelsDetails__card__price--del {
   font-size: 12px;
 }
 
 @media (min-width: 768px) {
-  .result .hotelsDetails__card__price--del {
+  .result__search .hotelsDetails__card__price--del {
     font-size: 14px;
   }
 }
 
 @media (min-width: 992px) {
-  .result .hotelsDetails__card__price--del {
+  .result__search .hotelsDetails__card__price--del {
     font-size: 16px;
   }
 }
 
-.result .hotelsDetails__card__room {
+.result__search .hotelsDetails__card__room {
   font-size: 14px;
 }
 
 @media (min-width: 992px) {
-  .result .hotelsDetails__card__room {
+  .result__search .hotelsDetails__card__room {
     font-size: 16px;
   }
 }

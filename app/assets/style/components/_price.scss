@@ -1,0 +1,17 @@
+.priceGroup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $gray-800;
+  &__price{
+    color: $dark;
+    font-weight: bold;
+  }
+  &--sale{
+    .priceGroup__price{
+      span{
+        color: $primary;
+      }
+    }
+  }
+}

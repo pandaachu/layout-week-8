@@ -1,0 +1,20 @@
+.details{
+  .font-info{
+    font-size: 14px;
+  }
+  &__intro{
+    height: 434px;
+  }
+  .imgHeight--half{
+    height: calc(100%/2 - 0.25rem);
+  }
+  &__table{
+    tbody{
+      tr>td{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

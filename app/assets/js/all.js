@@ -44,7 +44,7 @@ var mySwiper = new Swiper('.choices__swiper', {
 var mySwiper = new Swiper('.hotelsDetails__swiper', {
   // autoplay: true,
   speed: 1000,
-  // spaceBetween: 100,
+  spaceBetween: 5,
   loop: true,
   // Navigation arrows
   navigation: {
@@ -57,17 +57,17 @@ $(document).ready(function () {
 
   // modal
   if ($(window).width() > 767){
-    // $('#exampleModalLong').modal('show')
-    $('#exampleModalLong').removeClass('modal')
+    $('#resultModal').removeClass('modal')
   }
-  if ($(window).width() <= 767) {
-    $('#exampleModalLong').modal('hide')
-    $('#exampleModalLong').addClass('modal fade')
+  if ($(window).width() <= 767) { // mobile
+    $('#resultModal').modal('hide')
+    $('#resultModal').addClass('modal fade')
     // btn-modal
-    $('#btn-modal').click(function() {
-      
-      
-      $('#exampleModalLong').modal('show')
+    $('#resultModalBtnn').click(function() {
+      $('#resultModal').modal('show')
+    });
+    $('#filterDropdownBtn').click(function() {
+      $('.result__filter__dropdown').toggleClass('d-flex shadow-sm')
     });
   }
   

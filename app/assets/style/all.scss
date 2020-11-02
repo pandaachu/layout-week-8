@@ -24,7 +24,13 @@
 @import "components/search-side-bar";
 @import "components/star";
 @import "components/customer-pagination";
+@import "components/modal-menu";
+@import "components/price";
+
+// layout
+@import "layout/grid";
 
 // pages
 @import "pages/index";
-@import "pages/result"
+@import "pages/result";
+@import "pages/details";

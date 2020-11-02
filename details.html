@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aloha Details</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="header container">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-md navbar-light px-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand m-0" href="#"><img src="./assets/images/ic-logo-aloha.svg" alt=""></a>
+            <a class="btn order-md-3 px-0 font-roboto" href="#">Login</a>
+            <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown  mr-md-5">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span class="material-icons">language</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">中文</a>
+                    <a class="dropdown-item" href="#">English</a>
+                  </div>
+                </li>
+                <li class="nav-item mr-md-5">
+                  <a class="nav-link px-0 font-roboto" href="#">Sign up</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="resultSearchBar bg-secondary py-md-4 py-0">
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex">
+          <div class="resultSearchBar__item resultSearchBar__input d-flex align-items-center rounded-lg py-3">
+            <span class="resultSearchBar__icon material-icons d-none d-md-block px-lg-3 px-md-2">location_on</span>
+            <div class="d-flex flex-column">
+              <span class="resultSearchBar__title text-uppercase d-none d-md-block">Destination</span>
+              <input type="text" class="resultSearchBar__text form-control p-0 border-0 rounded-lg" aria-label="Sizing example input" placeholder="Bangkok, Thailand">
+            </div>
+          </div>
+          <div class="resultSearchBar__item resultSearchBar__input d-lg-none d-flex align-items-center rounded-lg py-3">
+            <span class="resultSearchBar__icon material-icons d-none d-md-block px-lg-3 px-md-2">date_range</span>
+            <div class="d-flex flex-column">
+              <span class="resultSearchBar__title text-uppercase d-none d-md-block">Check-in / out</span>
+              <input type="text" class="resultSearchBar__text form-control p-0 border-0 rounded-lg" aria-label="Sizing example input" placeholder="17 June - 19 June">
+            </div>
+          </div>
+          <div class="resultSearchBar__item resultSearchBar__input-group d-lg-flex d-none rounded-lg py-3">
+            <div class="resultSearchBar__input d-flex align-items-center">
+              <span class="resultSearchBar__icon material-icons d-none d-md-block px-lg-3 px-md-2">date_range</span>
+              <div class="d-md-flex flex-md-column">
+                <span class="resultSearchBar__title text-uppercase d-none d-md-block">Destination</span>
+                <input type="text" class="resultSearchBar__text form-control p-0 border-0 rounded-lg" aria-label="Sizing example input" placeholder="17 June">
+              </div>
+            </div>
+            <div class="resultSearchBar__input d-flex align-items-center">
+              <div class="d-flex flex-column">
+                <span class="resultSearchBar__title text-uppercase d-none d-md-block">Destination</span>
+                <input type="text" class="resultSearchBar__text form-control p-0 border-0 rounded-lg" aria-label="Sizing example input" placeholder="19 June">
+              </div>
+            </div>
+          </div>
+          <div class="resultSearchBar__item resultSearchBar__input d-flex align-items-center rounded-lg py-3">
+            <span class="resultSearchBar__icon material-icons d-none d-md-block px-lg-3 px-md-2">person</span>
+            <div class="d-flex flex-column">
+              <span class="resultSearchBar__title text-uppercase d-none d-md-block">Guests</span>
+              <input type="text" class="resultSearchBar__text form-control p-0 border-0 rounded-lg" aria-label="Sizing example input" placeholder="2 adults・1 room"">
+            </div>
+          </div>
+          <button class="resultSearchBar__btn btn btn-primary text-uppercase d-none d-md-block" type="button">search</button>
+        </div>
+      </div>
+    </section>
+
+    
+<div class="details mt-4">
+  <section class="container full-width-row mb-5">
+    <div class="row customer-no-gutters">
+      <div class="details__intro col d-flex">
+        <div class="details__swiper swiper-container d-md-none">
+          <div class="swiper-wrapper">
+            <div
+              class="hotelsDetails__img swiper-slide bg-cover bg-cover--center"
+              style="background-image: url(./assets/images/hotel/taylor-simpson-R49Mu5jfgSk-unsplash.jpg);"
+            ></div>
+            <div
+              class="hotelsDetails__img swiper-slide bg-cover bg-cover--center"
+              style="background-image: url(./assets/images/details/taylor-simpson-BRyJHPCyBlw-unsplash.jpg);"
+            ></div>
+            <div
+              class="hotelsDetails__img swiper-slide bg-cover bg-cover--center"
+              style="background-image: url(./assets/images/details/taylor-simpson-BRyJHPCyBlw-unsplash.jpg);"
+            ></div>
+            <div
+              class="hotelsDetails__img swiper-slide bg-cover bg-cover--center"
+              style="background-image: url(./assets/images/details/taylor-simpson-BRyJHPCyBlw-unsplash.jpg);"
+            ></div>
+          </div>
+          <div class="hotelsDetails__button swiper-button-prev"></div>
+          <div class="hotelsDetails__button swiper-button-next"></div>
+        </div>
+        <div
+          class="details__intro__img bg-cover bg-cover--center rounded mr-2"
+          style="background-image: url(./assets/images/hotel/taylor-simpson-R49Mu5jfgSk-unsplash.jpg); flex: 1.5;"></div>
+        <div class="d-flex flex-column" style="flex: 1">
+          <div
+            class="details__intro__img imgHeight--half bg-cover bg-cover--center rounded mb-auto"
+            style="background-image: url(./assets/images/details/taylor-simpson-BRyJHPCyBlw-unsplash.jpg);"
+          ></div>
+          <div class="imgHeight--half d-flex">
+            <div
+              class="details__intro__img bg-cover bg-cover--center rounded mr-2"
+              style="background-image: url(./assets/images/details/taylor-simpson-L-HhvkK7xrM-unsplash.jpg); flex: 1; height: 100%;"
+            ></div>
+            <div class="d-flex flex-column" style="flex: 1.2; height: 100%;">
+              <div
+                class="details__intro__img bg-cover bg-cover--center rounded mb-2"
+                style="background-image: url(./assets/images/details/taylor-simpson-Z8s3PRQVuUk-unsplash.jpg);flex: 1.8 "
+              ></div>
+              <button type="button" class="btn btn-dark" style="flex: 0.5 ">See All 10 photos</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <div class="row">
+      <div class="col-7 mb-sec-1">
+        <div class="d-flex">
+          <h3 class="h3 font-weight-bold font-raleway mr-3">Rachada Hotel</h3>
+          <div class="star star--4 d-flex align-items-center">
+            <span class="text-muted ml-2">4.0 (283)</span>
+          </div>
+        </div>
+        <a class="font-s" href="">318 Phaya Thai Road, Ratchathewi, Phaya Thai, 10400 Bangkok, Thailand</a>
+        <p class="font-info text-muted mt-3">
+          The Rachada Hotel is an establishment that provides paid lodging on a short-term basis. Facilities provided may range from a modest-quality mattress in a small room to large suites with bigger, higher-quality beds, a dresser, a refrigerator and other kitchen facilities, upholstered chairs, a flat screen television, and en-suite bathrooms.
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="container table-responsive">
+    <div class="row mb-5">
+      <section class="col-lg-7">
+        <h4 class="h4 font-weight-bold font-raleway mb-4">Select your room</h4>
+        <ul class="d-flex justify-content-between">
+          <li class="d-flex align-items-center font-info text-muted rounded bg-secondary p-2 mr-2" style="flex: 1;">Bangkok, Thailand</li>
+          <li class="d-flex align-items-center font-info text-muted rounded bg-secondary p-2 mr-2" style="flex: 1.5;">17 June - 19 June・2 nights</li>
+          <li class="d-flex align-items-center font-info text-muted rounded bg-secondary p-2 mr-2" style="flex: 1;">2 adults・1 room</li>
+          <li class="d-flex align-items-center font-weight-bold p-2" style="flex: 0.8;"><a href="">EDIT DETAIL</a></li>
+        </ul>
+      </section>
+    </div>
+    <!-- table-bordered -->
+    <table class="details__table table">
+      <thead>
+        <tr class="d-flex">
+          <th class="col col-lg-6 border-0">ROOM TYPE</th>
+          <!-- <th class="col col-lg-3 mr-auto"></th> -->
+          <th class="col col-lg-2 border-0 text-center">SLEEPS</th>
+          <th class="col col-lg-2 border-0 text-center">PRICE</th>
+          <th class="col col-lg-2 border-0 text-center">ROOMS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="d-flex">
+          <td class="col col-lg-6 d-flex justify-content-start py-4">
+            <div
+              class="bg-cover bg-cover--center rounded-left"
+              style="background-image: url(./assets/images/hotel/annie-spratt-WfrPa0oqcMA-unsplash.jpg); width: 255px;height: 175px"
+            ></div>
+            <div class="text-left d-flex flex-column align-items-start ml-3">
+              <div class="mb-3">
+                <h6 class="h6">Deluxe Double Room A</h6>
+                <p class="font-info text-muted">1 bed (Queen size)</p>
+              </div>
+              <div class="d-flex">
+                <ul class="d-flex flex-column text-muted mr-3">
+                  <li class="mb-1">
+                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">wifi</span>Wi-Fi</p>
+                  </li>
+                  <li class="mb-1">
+                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">restaurant</span>Breakfast</p>
+                  </li>
+                  <li class="mb-1">
+                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">tv</span>Television</p>
+                  </li>
+                  <li>
+                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">ac_unit</span>Air Conditioner</p>
+                  </li>
+                </ul>
+                <ul class="d-flex flex-column text-muted">
+                  <li class="mb-1">
+                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">room_service</span>Room Service</p>
+                  </li>
+                  <li class="mb-1">
+                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">smoke_free</span>Smoke Free</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </td>
+          <td class="col col-lg-2 text-center">
+            <span class="material-icons mr-2">person person</span>
+          </td>
+          <td class="col col-lg-2 text-center">
+            <div class="priceGroup priceGroup--sale">
+              <del class="font-info">TWD 1,600</del>
+              <p class="priceGroup__price"> TWD <span> 1,490</span></p>
+              <p class="font-s">per night</p>
+            </div>
+          </td>
+          <td class="col col-lg-2 text-center">
+            <div class="d-flex justify-content-center">
+              <a href="#"><span class="material-icons mr-3">remove</span></a>
+              <span class="mr-3">0</span>
+              <a href="#"><span class="material-icons">add</span></a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <table class="details__table table">
+      <thead>
+        <tr class="d-flex">
+          <th class="col col-lg-3">ROOM TYPE</th>
+          <th class="col col-lg-3 mr-auto"></th>
+          <th class="col col-lg-2 text-center">SLEEPS</th>
+          <th class="col col-lg-2 text-center">PRICE</th>
+          <th class="col col-lg-2 text-center">ROOMS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="d-flex">
+          <td
+            class="col col-lg-3 bg-cover bg-cover--center rounded-left"
+            style="background-image: url(./assets/images/hotel/annie-spratt-WfrPa0oqcMA-unsplash.jpg); height: 175px;">
+          </td>
+          <td class="col col-lg-3 text-left d-flex flex-column align-items-start">
+            <div class="mb-3">
+              <h6 class="h6">Deluxe Double Room A</h6>
+              <p class="font-info text-muted">1 bed (Queen size)</p>
+            </div>
+            <div class="d-flex">
+              <ul class="d-flex flex-column text-muted mr-2">
+                <li>
+                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">wifi</span>Wi-Fi</p>
+                </li>
+                <li>
+                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">restaurant</span>Breakfast</p>
+                </li>
+                <li>
+                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">tv</span>Television</p>
+                </li>
+                <li>
+                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">ac_unit</span>Air Conditioner</p>
+                </li>
+              </ul>
+              <ul class="d-flex flex-column text-muted">
+                <li>
+                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">room_service</span>Room Service</p>
+                </li>
+                <li>
+                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">smoke_free</span>Smoke Free</p>
+                </li>
+              </ul>
+            </div>
+          </td>
+          <td class="col col-lg-2 text-center">
+            <span class="material-icons mr-2">person person</span>
+          </td>
+          <td class="col col-lg-2 text-center">
+            <div class="priceGroup">
+              <del>TWD 1,600</del>
+              <p class="priceGroup__price"> TWD <span> 1,490</span></p>
+              <p>per night</p>
+            </div>
+          </td>
+          <td class="col col-lg-2 text-center">
+            <div class="d-flex justify-content-center">
+              <a href="#"><span class="material-icons mr-3">remove</span></a>
+              <span class="mr-3">0</span>
+              <a href="#"><span class="material-icons">add</span></a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table> -->
+  </div>
+</div>
+
+
+    <!-- subscribe -->
+    <section class="subscribe bg-secondary text-center py-4">
+      <div class="container">
+        <div class="row flex-column flex-md-row align-items-center">
+          <div class="col-lg-5 col-md-4 col">
+            <h3 class="h3 font-raleway font-weight-bold mb-3 mb-md-0">Subscribe for Exclusive Offer</h2>
+          </div>
+          <div class="col-lg-7 col-md-8 col">
+            <div class="input-group">
+              <input type="text" class="form-control form-control-lg border-0" placeholder="Your email address" aria-label="email" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-lg btn-primary text-uppercase type="button">subscribe</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer container d-flex flex-md-row flex-column-reverse justify-content-center py-4">
+      <div class="text-muted text-center mr-md-5">© 2020 ALOHA, Inc. All rights reserved.</div>
+      <ul class="d-flex mr-lg-auto justify-content-center">
+        <li class="mr-4"><a class="text-muted" href="#">FAQs</a></li>
+        <li class="mr-4"><a class="text-muted" href="#">Terms of use</a></li>
+        <li><a class="text-muted" href="#">Privacy policy</a></li>
+      </ul>
+      <ul class="d-lg-flex d-none">
+        <li class="nav-item dropdown mr-md-5">
+          <a class="nav-link p-0 dropdown-toggle text-muted d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="material-icons">language</span>
+            <span >English</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">中文</a>
+            <a class="dropdown-item" href="#">English</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown mr-md-5">
+          <a class="nav-link p-0 dropdown-toggle text-muted d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="material-icons">attach_money</span>
+            <span>TWD</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">TWD</a>
+            <a class="dropdown-item" href="#">USD</a>
+          </div>
+        </li>
+      </ul>
+    </footer>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Datetimepicker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>

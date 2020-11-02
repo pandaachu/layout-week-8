@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
@@ -97,11 +101,26 @@
     <div class="result">
   <section class="result__filter container">
     <div class="row align-items-end my-4">
-      <div class="col col-md-4">
+      <div class="col col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
         <h3 class="h3 font-raleway font-weight-bold">Bangkok <sup class="text-primary">3,240</sup></h3>
       </div>
-      <div class="col col-md-8 d-none d-md-block">
-        <div class="d-flex">
+      <!-- <div class="col col-md-8">
+        <button id="btn-modal" type="button" class="btn btn-primary d-md-none" data-toggle="modal" data-target="#resultModal">
+          Launch demo modal
+        </button>
+      </div> -->
+      <div class="col col-md-8 position-relative">
+        <div class="d-md-none">
+          <ul class="d-flex justify-content-between">
+            <li>
+              <a id="resultModalBtn" class="modal-title d-flex align-items-center px-5 py-1 border-right" data-toggle="modal" data-target="#resultModal"><span class="material-icons mr-2">filter_list</span>FILTER</a>
+            </li>
+            <li>
+              <a class="modal-title d-flex align-items-center px-5 py-1" id="filterDropdownBtn"><span class="material-icons mr-2">sort</span>SORT</a>
+            </li>
+          </ul>
+        </div>
+        <div class="result__filter__dropdown d-none d-md-flex">
           <a href="" class="active mr-3">
             <h6 class="h6 font-weight-bold">Recommended</h6>
           </a>
@@ -117,20 +136,17 @@
         </div>
       </div>
     </div>
-    <button id="btn-modal" type="button" class="btn btn-primary d-md-none" data-toggle="modal" data-target="#exampleModalLong">
-      Launch demo modal
-    </button>
   </section>
   <section class="result__search container mt-4 full-width-row">
     <div class="row customer-no-gutters">
       <!-- searchSideBar  -->
-      <div class="result__modal col-md-4" id="exampleModalLong">
+      <div class="result__modal col-md-4" id="resultModal">
         <div class="modal-dialog m-0">
           <div class="modal-content border-0">
-            <div class="result__modal__header modal-header bg-white fixed-top d-md-none">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+            <div class="result__modal__header d-flex align-items-center modal-header text-dark bg-white fixed-top d-md-none">
+              <h6 class="modal-title d-flex align-items-center" id="exampleModalLabel"><span class="material-icons mr-2">filter_list</span>FILTER</h6>
+              <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="material-icons text-dark">close</span>
               </button>
             </div>
             <div class="result__modal__body searchSideBar modal-body rounded-lg">
@@ -245,7 +261,7 @@
               </div>
             </div>
             <div class="result__modal__footer flex flex-column fixed-bottom d-md-none">
-              <h3 class="h3 text-left text-white font-raleway font-weight-bold mb-3 d-flex">Find 1,245 results</h3>
+              <h3 class="h3 text-left text-white font-raleway font-weight-bold my-3 d-flex">Find 1,245 results</h3>
               <div class="d-flex justify-content-between">
                 <button type="button" class="result__modal__btn btn btn-lg btn-outline-secondary mr-2" data-dismiss="modal">Clear</button>
                 <button type="button" class="result__modal__btn btn btn-lg btn-primary">Filter</button>
@@ -257,7 +273,7 @@
       <!-- hotels details -->
       <div class="hotelsDetails col-12 col-md-8">
         <div class="hotelsDetails__card pb-0 pb-md-4">
-          <div class="card border-0">
+          <a href="details.html" class="card border-0">
             <div class="row no-gutters">
               <div class="col-5 col-md-4">
                 <div class="card-img border-0">
@@ -305,11 +321,11 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <!-- sale -->
         <div class="hotelsDetails__card py-0 py-md-4">
-          <div class="card border-0">
+          <a href="details.html" class="card border-0">
             <div class="row no-gutters">
               <div class="col-5 col-md-4">
                 <div class="card-img border-0">
@@ -357,10 +373,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="hotelsDetails__card py-0 py-md-4">
-          <div class="card border-0">
+          <a href="details.html" class="card border-0">
             <div class="row no-gutters">
               <div class="col-5 col-md-4">
                 <div class="card-img border-0">
@@ -407,10 +423,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="hotelsDetails__card py-0 py-md-4">
-          <div class="card border-0">
+          <a href="details.html" class="card border-0">
             <div class="row no-gutters">
               <div class="col-5 col-md-4">
                 <div class="card-img border-0">
@@ -458,10 +474,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="hotelsDetails__card py-0 py-md-4">
-          <div class="card border-0">
+          <a href="details.html" class="card border-0">
             <div class="row no-gutters">
               <div class="col-5 col-md-4">
                 <div class="card-img border-0">
@@ -509,10 +525,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="hotelsDetails__card py-0 py-md-4">
-          <div class="card border-0">
+          <a href="details.html" class="card border-0">
             <div class="row no-gutters">
               <div class="col-5 col-md-4">
                 <div class="card-img border-0">
@@ -559,10 +575,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="hotelsDetails__card py-0 py-md-4">
-          <div class="card border-0">
+          <a href="details.html" class="card border-0">
             <div class="row no-gutters">
               <div class="col-5 col-md-4">
                 <div class="card-img border-0">
@@ -610,10 +626,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="hotelsDetails__card py-0 py-md-4">
-          <div class="card border-0">
+          <a href="details.html" class="card border-0">
             <div class="row no-gutters">
               <div class="col-5 col-md-4">
                 <div class="card-img border-0">
@@ -661,10 +677,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="hotelsDetails__card py-0 py-md-4">
-          <div class="card border-0">
+          <a href="details.html" class="card border-0">
             <div class="row no-gutters">
               <div class="col-5 col-md-4">
                 <div class="card-img border-0">
@@ -709,10 +725,10 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="hotelsDetails__card py-0 py-md-4">
-          <div class="card border-0">
+          <a href="details.html" class="card border-0">
             <div class="row no-gutters">
               <div class="col-5 col-md-4">
                 <div class="card-img border-0">
@@ -756,7 +772,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

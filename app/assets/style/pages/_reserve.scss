@@ -1,0 +1,20 @@
+.reserve{
+  &__dropdown{
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      border-top :1px solid $white;
+      top: -999px;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      &.animated{
+        top: 110px;
+      }
+    }
+  }
+  &__dropdownBtn__icon{
+    transform: rotate(0);
+    transition: 0.5s ease-in-out;
+    &.animated{
+      transform: rotate(180deg);
+    }
+  }
+}

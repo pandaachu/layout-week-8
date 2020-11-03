@@ -1,0 +1,10 @@
+.borderBottom {
+  &--light{
+    border-bottom :1px solid $white;
+  }
+}
+.borderTop {
+  &--light{
+    border-top :1px solid $white;
+  }
+}

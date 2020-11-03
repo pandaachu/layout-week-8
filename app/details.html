@@ -5,11 +5,12 @@ engine: ejs
 current: Details
 ---
 
-<div class="details mt-4">
+<div class="details mt-4 mb-5">
   <section class="container full-width-row mb-5">
     <div class="row customer-no-gutters">
-      <div class="details__intro col d-flex">
-        <div class="details__swiper swiper-container d-md-none">
+      <!-- swiper -->
+      <div class="details__intro col d-md-none">
+        <div class="details__swiper swiper-container">
           <div class="swiper-wrapper">
             <div
               class="hotelsDetails__img swiper-slide bg-cover bg-cover--center"
@@ -21,19 +22,22 @@ current: Details
             ></div>
             <div
               class="hotelsDetails__img swiper-slide bg-cover bg-cover--center"
-              style="background-image: url(./assets/images/details/taylor-simpson-BRyJHPCyBlw-unsplash.jpg);"
+              style="background-image: url(./assets/images/details/taylor-simpson-L-HhvkK7xrM-unsplash.jpg);"
             ></div>
             <div
               class="hotelsDetails__img swiper-slide bg-cover bg-cover--center"
-              style="background-image: url(./assets/images/details/taylor-simpson-BRyJHPCyBlw-unsplash.jpg);"
+              style="background-image: url(./assets/images/details/taylor-simpson-Z8s3PRQVuUk-unsplash.jpg);"
             ></div>
           </div>
           <div class="hotelsDetails__button swiper-button-prev"></div>
           <div class="hotelsDetails__button swiper-button-next"></div>
         </div>
+      </div>
+      <div class="details__intro col d-md-flex d-none">
         <div
           class="details__intro__img bg-cover bg-cover--center rounded mr-2"
-          style="background-image: url(./assets/images/hotel/taylor-simpson-R49Mu5jfgSk-unsplash.jpg); flex: 1.5;"></div>
+          style="background-image: url(./assets/images/hotel/taylor-simpson-R49Mu5jfgSk-unsplash.jpg); flex: 1.5;"
+        ></div>
         <div class="d-flex flex-column" style="flex: 1">
           <div
             class="details__intro__img imgHeight--half bg-cover bg-cover--center rounded mb-auto"
@@ -58,8 +62,8 @@ current: Details
   </section>
   <section class="container">
     <div class="row">
-      <div class="col-7 mb-sec-1">
-        <div class="d-flex">
+      <div class="col col-lg-7 mb-sec-1">
+        <div class="d-flex flex-wrap">
           <h3 class="h3 font-weight-bold font-raleway mr-3">Rachada Hotel</h3>
           <div class="star star--4 d-flex align-items-center">
             <span class="text-muted ml-2">4.0 (283)</span>
@@ -73,10 +77,10 @@ current: Details
     </div>
   </section>
   <div class="container table-responsive">
-    <div class="row mb-5">
+    <div class="row mb-md-5">
       <section class="col-lg-7">
         <h4 class="h4 font-weight-bold font-raleway mb-4">Select your room</h4>
-        <ul class="d-flex justify-content-between">
+        <ul class="d-md-flex justify-content-between d-none">
           <li class="d-flex align-items-center font-info text-muted rounded bg-secondary p-2 mr-2" style="flex: 1;">Bangkok, Thailand</li>
           <li class="d-flex align-items-center font-info text-muted rounded bg-secondary p-2 mr-2" style="flex: 1.5;">17 June - 19 June・2 nights</li>
           <li class="d-flex align-items-center font-info text-muted rounded bg-secondary p-2 mr-2" style="flex: 1;">2 adults・1 room</li>
@@ -84,140 +88,243 @@ current: Details
         </ul>
       </section>
     </div>
-    <!-- table-bordered -->
+    <!-- table -->
     <table class="details__table table">
-      <thead>
+      <thead class="d-none d-md-block">
         <tr class="d-flex">
-          <th class="col col-lg-6 border-0">ROOM TYPE</th>
+          <th class="col col-md-6 border-0">ROOM TYPE</th>
           <!-- <th class="col col-lg-3 mr-auto"></th> -->
-          <th class="col col-lg-2 border-0 text-center">SLEEPS</th>
-          <th class="col col-lg-2 border-0 text-center">PRICE</th>
-          <th class="col col-lg-2 border-0 text-center">ROOMS</th>
+          <th class="col col-md-2 border-0 text-center">SLEEPS</th>
+          <th class="col col-md-2 border-0 text-center">PRICE</th>
+          <th class="col col-md-2 border-0 text-center">ROOMS</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="d-flex">
-          <td class="col col-lg-6 d-flex justify-content-start py-4">
+        <tr class="d-flex flex-wrap mb-2">
+          <td class="details__table__info col-12 col-md-6 d-flex justify-content-start py-0 py-md-4">
+            <!-- images -->
             <div
-              class="bg-cover bg-cover--center rounded-left"
-              style="background-image: url(./assets/images/hotel/annie-spratt-WfrPa0oqcMA-unsplash.jpg); width: 255px;height: 175px"
+              class="details__table__img bg-cover bg-cover--center rounded-left-lg"
+              style="background-image: url(./assets/images/hotel/shop-slo-qyNvQT4sf80-unsplash.jpg);"
             ></div>
-            <div class="text-left d-flex flex-column align-items-start ml-3">
-              <div class="mb-3">
-                <h6 class="h6">Deluxe Double Room A</h6>
+            <!-- info -->
+            <div class="text-left d-flex flex-column align-items-start ml-lg-3 ml-md-2 ml-2">
+              <div class="mb-md-3 mb-2">
+                <h6 class="h6 font-weight-bold">Deluxe Double Room A</h6>
                 <p class="font-info text-muted">1 bed (Queen size)</p>
               </div>
-              <div class="d-flex">
-                <ul class="d-flex flex-column text-muted mr-3">
-                  <li class="mb-1">
-                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">wifi</span>Wi-Fi</p>
+              <div class="d-flex flex-wrap">
+                <ul class="d-flex flex-lg-column text-muted mr-2">
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">wifi</span>
+                    <p class="font-info d-lg-block d-none">Wi-Fi</p>
                   </li>
-                  <li class="mb-1">
-                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">restaurant</span>Breakfast</p>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">restaurant</span>
+                    <p class="font-info d-lg-block d-none">Breakfast</p>
                   </li>
-                  <li class="mb-1">
-                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">tv</span>Television</p>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">tv</span>
+                    <p class="font-info d-lg-block d-none">Television</p>
                   </li>
-                  <li>
-                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">ac_unit</span>Air Conditioner</p>
-                  </li>
-                </ul>
-                <ul class="d-flex flex-column text-muted">
-                  <li class="mb-1">
-                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">room_service</span>Room Service</p>
-                  </li>
-                  <li class="mb-1">
-                    <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">smoke_free</span>Smoke Free</p>
+                  <li class="d-flex">
+                    <span class="material-icons h6 mr-lg-1">ac_unit</span>
+                    <p class="font-info d-lg-block d-none">Air Conditioner</p>
                   </li>
                 </ul>
+                <ul class="d-flex flex-lg-column flex-wrap text-muted">
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">room_service</span>
+                    <p class="font-info d-lg-block d-none">Room Service</p>
+                  </li>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">smoke_free</span>
+                    <p class="font-info d-lg-block d-none">Smoke Free</p>
+                  </li>
+                </ul>
+                <span class="material-icons d-md-none w-100">person person</span>
               </div>
             </div>
           </td>
-          <td class="col col-lg-2 text-center">
+          <td class="col-12 col-md-2 text-center d-none d-md-flex">
             <span class="material-icons mr-2">person person</span>
           </td>
-          <td class="col col-lg-2 text-center">
-            <div class="priceGroup priceGroup--sale">
+          <td class="details__table__price col-6 col-md-2 order-3 justify-content-end order-md-4 text-center">
+            <div class="priceGroup priceGroup--sale align-items-end">
               <del class="font-info">TWD 1,600</del>
               <p class="priceGroup__price"> TWD <span> 1,490</span></p>
-              <p class="font-s">per night</p>
+              <p class="font-s d-none d-md-block">per night</p>
             </div>
           </td>
-          <td class="col col-lg-2 text-center">
+          <td class="details__table__num col-6 col-md-2 text-center">
             <div class="d-flex justify-content-center">
-              <a href="#"><span class="material-icons mr-3">remove</span></a>
-              <span class="mr-3">0</span>
-              <a href="#"><span class="material-icons">add</span></a>
+              <a href="#"><span class="material-icons text-dark mr-md-3 mr-4">remove</span></a>
+              <span class="mr-md-3 mr-4">0</span>
+              <a href="#"><span class="material-icons text-dark">add</span></a>
+            </div>
+          </td>
+        </tr>
+        <tr class="d-flex flex-wrap">
+          <td class="details__table__info col-12 col-md-6 d-flex justify-content-start py-0 py-md-4">
+            <!-- images -->
+            <div
+              class="details__table__img bg-cover bg-cover--center rounded-left-lg"
+              style="background-image: url(./assets/images/hotel/shche_-team-PFi1uWHh2dQ-unsplash.jpg);"
+            ></div>
+            <!-- info -->
+            <div class="text-left d-flex flex-column align-items-start ml-lg-3 ml-md-2 ml-2">
+              <div class="mb-md-3 mb-2">
+                <h6 class="h6 font-weight-bold">Deluxe Double Room B</h6>
+                <p class="font-info text-muted">1 bed (Queen size)</p>
+              </div>
+              <div class="d-flex flex-wrap">
+                <ul class="d-flex flex-lg-column text-muted mr-2">
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">wifi</span>
+                    <p class="font-info d-lg-block d-none">Wi-Fi</p>
+                  </li>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">restaurant</span>
+                    <p class="font-info d-lg-block d-none">Breakfast</p>
+                  </li>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">tv</span>
+                    <p class="font-info d-lg-block d-none">Television</p>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-icons h6 mr-lg-1">ac_unit</span>
+                    <p class="font-info d-lg-block d-none">Air Conditioner</p>
+                  </li>
+                </ul>
+                <ul class="d-flex flex-lg-column flex-wrap text-muted">
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">room_service</span>
+                    <p class="font-info d-lg-block d-none">Room Service</p>
+                  </li>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">smoke_free</span>
+                    <p class="font-info d-lg-block d-none">Smoke Free</p>
+                  </li>
+                </ul>
+                <span class="material-icons d-md-none w-100">person person</span>
+              </div>
+            </div>
+          </td>
+          <td class="col-12 col-md-2 text-center d-none d-md-flex">
+            <span class="material-icons mr-2">person person</span>
+          </td>
+          <td class="details__table__price col-6 col-md-2 order-3 justify-content-end order-md-4 text-center">
+            <div class="priceGroup align-items-end">
+              <p class="priceGroup__price"> TWD <span> 1,600</span></p>
+              <p class="font-s d-none d-md-block">per night</p>
+            </div>
+          </td>
+          <td class="details__table__num col-6 col-md-2 text-center">
+            <div class="d-flex justify-content-center">
+              <a href="#"><span class="material-icons text-dark mr-md-3 mr-4">remove</span></a>
+              <span class="mr-md-3 mr-4">0</span>
+              <a href="#"><span class="material-icons text-dark">add</span></a>
+            </div>
+          </td>
+        </tr>
+        <tr class="d-flex flex-wrap">
+          <td class="details__table__info col-12 col-md-6 d-flex justify-content-start py-0 py-md-4">
+            <!-- images -->
+            <div
+              class="details__table__img bg-cover bg-cover--center rounded-left-lg"
+              style="background-image: url(./assets/images/hotel/taylor-simpson-R49Mu5jfgSk-unsplash.jpg);"
+            ></div>
+            <!-- info -->
+            <div class="text-left d-flex flex-column align-items-start ml-lg-3 ml-md-2 ml-2">
+              <div class="mb-md-3 mb-2">
+                <h6 class="h6 font-weight-bold">Deluxe Suite with Pool</h6>
+                <p class="font-info text-muted">1 bed (Queen size)</p>
+              </div>
+              <div class="details__table__icon d-flex flex-wrap">
+                <ul class="d-flex flex-wrap flex-lg-column text-muted mr-md-2">
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">wifi</span>
+                    <p class="font-info d-lg-block d-none">Wi-Fi</p>
+                  </li>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">restaurant</span>
+                    <p class="font-info d-lg-block d-none">Breakfast</p>
+                  </li>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">tv</span>
+                    <p class="font-info d-lg-block d-none">Television</p>
+                  </li>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">ac_unit</span>
+                    <p class="font-info d-lg-block d-none">Air Conditioner</p>
+                  </li>
+                </ul>
+                <ul class="d-flex flex-lg-column flex-wrap text-muted">
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">kitchen</span>
+                    <p class="font-info d-lg-block d-none">Refrigerator</p>
+                  </li>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">room_service</span>
+                    <p class="font-info d-lg-block d-none">Room Service</p>
+                  </li>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">local_bar</span>
+                    <p class="font-info d-lg-block d-none">Mini Bar</p>
+                  </li>
+                  <li class="mb-1 d-flex">
+                    <span class="material-icons h6 mr-lg-1 mr-2">smoke_free</span>
+                    <p class="font-info d-lg-block d-none">Smoke Free</p>
+                  </li>
+                </ul>
+                <span class="material-icons d-md-none w-100">person person</span>
+              </div>
+            </div>
+          </td>
+          <td class="col-12 col-md-2 text-center d-none d-md-flex">
+            <span class="material-icons mr-2">person person</span>
+          </td>
+          <td class="details__table__price col-6 col-md-2 order-3 justify-content-end order-md-4 text-center">
+            <div class="priceGroup align-items-end">
+              <p class="priceGroup__price"> TWD <span> 1,980</span></p>
+              <p class="font-s d-none d-md-block">per night</p>
+            </div>
+          </td>
+          <td class="details__table__num col-6 col-md-2 text-center">
+            <div class="d-flex justify-content-center">
+              <a href=""><span class="material-icons text-dark mr-md-3 mr-4">remove</span></a>
+              <span class=" mr-md-3 mr-4">1</span>
+              <a id="detailsModalBtn" href="javascript:void(0);"><span class="material-icons text-dark">add</span></a>
             </div>
           </td>
         </tr>
       </tbody>
     </table>
-    <!-- <table class="details__table table">
-      <thead>
-        <tr class="d-flex">
-          <th class="col col-lg-3">ROOM TYPE</th>
-          <th class="col col-lg-3 mr-auto"></th>
-          <th class="col col-lg-2 text-center">SLEEPS</th>
-          <th class="col col-lg-2 text-center">PRICE</th>
-          <th class="col col-lg-2 text-center">ROOMS</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="d-flex">
-          <td
-            class="col col-lg-3 bg-cover bg-cover--center rounded-left"
-            style="background-image: url(./assets/images/hotel/annie-spratt-WfrPa0oqcMA-unsplash.jpg); height: 175px;">
-          </td>
-          <td class="col col-lg-3 text-left d-flex flex-column align-items-start">
-            <div class="mb-3">
-              <h6 class="h6">Deluxe Double Room A</h6>
-              <p class="font-info text-muted">1 bed (Queen size)</p>
-            </div>
-            <div class="d-flex">
-              <ul class="d-flex flex-column text-muted mr-2">
-                <li>
-                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">wifi</span>Wi-Fi</p>
-                </li>
-                <li>
-                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">restaurant</span>Breakfast</p>
-                </li>
-                <li>
-                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">tv</span>Television</p>
-                </li>
-                <li>
-                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">ac_unit</span>Air Conditioner</p>
-                </li>
-              </ul>
-              <ul class="d-flex flex-column text-muted">
-                <li>
-                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">room_service</span>Room Service</p>
-                </li>
-                <li>
-                  <p class="font-info d-flex align-items-center"><span class="material-icons h6 mr-1">smoke_free</span>Smoke Free</p>
-                </li>
-              </ul>
-            </div>
-          </td>
-          <td class="col col-lg-2 text-center">
-            <span class="material-icons mr-2">person person</span>
-          </td>
-          <td class="col col-lg-2 text-center">
-            <div class="priceGroup">
-              <del>TWD 1,600</del>
-              <p class="priceGroup__price"> TWD <span> 1,490</span></p>
-              <p>per night</p>
-            </div>
-          </td>
-          <td class="col col-lg-2 text-center">
-            <div class="d-flex justify-content-center">
-              <a href="#"><span class="material-icons mr-3">remove</span></a>
-              <span class="mr-3">0</span>
-              <a href="#"><span class="material-icons">add</span></a>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table> -->
   </div>
 </div>
+<section id="detailsModal" class="modalMenu modalMenu--fromBottom d-none"">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-12 col-md-7 d-flex justify-content-end justify-content-md-center justify-content-lg-start">
+        <div class="text-white text-right pt-2">
+          <p class="font-s">1 room．2 night</p>
+          <h3 class="h3 text-left font-raleway font-weight-bold mb-3 d-flex"> <span class="mr-1">TWD</span> 3,960</h3>
+        </div>
+      </div>
+      <div class="col-12 col-md-5 col-lg-4">
+        <div class="d-flex justify-content-between">
+          <button
+            id="detailsModalCancle"
+            type="button"
+            class="result__modal__btn btn btn-lg btn-outline-secondary mr-2"
+          >CANCEL</button>
+          <button
+            type="button"
+            class="result__modal__btn btn btn-lg btn-primary"
+            onclick="location.href='reserve.html'"
+          >RESERVE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

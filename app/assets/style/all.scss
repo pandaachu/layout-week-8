@@ -14,6 +14,8 @@
 @import "utils/align";
 @import "utils/gradient";
 @import "utils/z-index";
+@import "utils/rounded";
+@import "utils/border";
 
 // components
 @import "components/subscribe";
@@ -34,3 +36,4 @@
 @import "pages/index";
 @import "pages/result";
 @import "pages/details";
+@import "pages/reserve";

@@ -3,6 +3,18 @@
   border-top-right-radius: 0.8rem;
   border-top-left-radius: 0.8rem;
   border: 0;
-  padding: 0.75rem;
-  height: 25vh;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  height: 23vh;
+  bottom: -23vh;
+  @include media-breakpoint-up(md) {
+    height: 100px;
+    bottom: -100px;
+  }
+  &--fromBottom{
+    bottom: 0;
+  }
+  &.animate{
+    bottom: 0;
+  }
 }

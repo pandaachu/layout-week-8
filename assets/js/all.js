@@ -53,8 +53,34 @@ var mySwiper = new Swiper('.hotelsDetails__swiper', {
     prevEl: '.swiper-button-prev'
   }
 });
+var mySwiper = new Swiper('.details__swiper', {
+  // autoplay: true,
+  speed: 1000,
+  spaceBetween: 1,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+});
 $(document).ready(function () {
-  // modal
+  // details page modal
+  $('#detailsModalBtn').click(function () {
+    $('#detailsModal').removeClass('d-none');
+    $('#detailsModal').addClass('fixed-bottom modalMenu--fromBottom');
+  });
+  $('#detailsModalCancle').click(function () {
+    $('#detailsModal').addClass('d-none');
+    $('#detailsModal').removeClass('fixed-bottom modalMenu--fromBottom');
+  }); // reserve page
+
+  $('#reserveDropdownBtn').click(function () {
+    $('#reserveDropdown').toggleClass('animated');
+    $('.reserve__price').toggleClass('d-none');
+    $('.reserve__dropdownBtn__icon').toggleClass('animated');
+  }); // modal
+
   if ($(window).width() > 767) {
     $('#resultModal').removeClass('modal');
   }

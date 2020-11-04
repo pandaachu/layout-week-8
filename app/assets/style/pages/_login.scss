@@ -1,0 +1,52 @@
+.login{
+  height: 100vh;
+  &__header{
+    &__close{
+      text-shadow: none;
+      opacity: 1;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 104px;
+    }
+  }
+  &__location{
+    &__icon{
+      background-color: rgba($gray, 0.8);
+      border-radius: 0.5rem;
+      display: inline-block;
+    }
+  }
+  &__background{
+    padding-right: 0;
+    padding-left: 0;
+    @include media-breakpoint-up(lg){
+      // padding-right: 15px;
+      // margin-right: auto;
+      // .row{
+      //   margin-right: -15px;
+      // }
+      // .col-lg-8{
+      //   padding-right: 15px;
+      // }
+      &__img{
+        margin-right: 45px;
+      }
+    }
+  }    
+}
+.bg{
+  position: relative;
+  height: 100vh;
+  &::before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    background-image: url(../images/login.jpg);
+    background-position: center center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+}

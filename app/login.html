@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%- title %></title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <div class="login">
+      <div class="container h-100 d-flex flex-column">
+        <!-- header -->
+        <div class="login__header row">
+          <header class="col-lg-8 py-4 d-flex">
+            <a class="mr-auto" href="index.html"><img src="./assets/images/ic-logo-aloha.svg" alt=""></a>
+            <button
+              onClick="history.back()"
+              type="button"
+              class="login__header__close close text-dark d-md-none"
+            >
+              <span aria-hidden="true" class="material-icons text-dark">close</span>
+            </button>
+          </header>
+        </div>
+        <!-- form -->
+        <div class="row mb-auto">
+          <div class="col-md-12">
+            <div class="row justify-content-md-center">
+              <div class="col-md-6 col-lg-8 d-none d-lg-block">
+                <h2 class="h2 font-title text-dark mb-3">An ideal hotel makes a wonderful Trip.</h2>
+                <p class="font-m">Discover your dream destination and hotel on ALOHA.com</p>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                <h3 class="h3 font-title text-dark mb-3">Login</h3>
+                <form action="member.html" class="mb-2">
+                  <div class="form-group">
+                    <label class="font-info mb-1" for="email">Email</label>
+                    <input type="email" class="form-control form-control-lg" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label class="font-info mb-1" for="password">Password</label>
+                    <input type="password" class="form-control form-control-lg" id="password">
+                  </div>
+                  <p class="font-s mb-3">
+                    By signing in or creating an account, you agree with our 
+                    <a href="">Terms & Conditions</a>
+                    and 
+                    <a href="">Privacy Statement</a>
+                  </p>
+                  <div class="form-group form-check custom-control custom-checkbox">
+                    <input type="checkbox" class="form-check-input custom-control-input" id="loginCheck" checked>
+                    <label class="form-check-label custom-control-label" for="loginCheck">Remember me</label>
+                  </div>
+                  <button  type="submit" class="btn btn-lg btn-primary btn-block mb-3">LOGIN</button>
+                  <p class="font-m text-center">Don’t have an account yet? <a class="font-weight-bold" href="">Sign up</a></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- location -->
+        <div class="row mb-4 d-md-block d-none">
+          <div class="col-lg-8 login__location mb-lg-4 d-flex justify-content-md-center">
+            <div class="login__location__icon flex">
+              <p class="text-white font-weight-light font-m d-flex align-items-cenetr py-2 px-3"> <span class="material-icons mr-1">location_on</span>Osaka Castel, Japan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- bachground -->
+      <div
+        class="login__background container-fluid position-absolute z-index--1 no-gutters d-md-block d-none"
+        style="top: 0; left: 0;"
+      >
+        <div class="row no-gutters">
+          <div class="col-lg-8 no-gutters">
+            <div
+              class="login__background__img bg-cover bg-cover--center"
+              style="background-image: url(./assets/images/login.jpg); height: 100vh;"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/vendors.js"></script>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <!-- Datetimepicker -->
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
+    <!-- <script src="./assets/js/all.js"></script> -->
+  </body>
+
+</html>

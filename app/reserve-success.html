@@ -1,0 +1,56 @@
+---
+title: Aloha Reserve-success
+layout: ./app/layout/reserve.ejs
+engine: ejs
+current: Reserve-success
+---
+<div class="reserveSuccess mt-3" style="min-height: calc(100vh - 54px - 94px);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col col-lg-8 mb-3">
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="3" scope="col"><h3 class="h3 font-title mb-2">Reservation received!</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-top">
+              <th class="pt-3" scope="row">Guest</th>
+              <td class="pt-3">David Lin</td>
+            </tr>
+            <tr>
+              <th scope="row">Email</th>
+              <td>
+                <div>
+                  <p>david0520@mail.com.tw</p>
+                  <p class="font-s text-primary">Confirmation email sent to this address</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="pb-3" scope="row">Phone</th>
+              <td class="pb-3">+886 9 32 456 789</td>
+            </tr>
+            <tr class="border-top">
+              <th class="py-3" scope="row">Room</th>
+              <td class="py-3">Deluxe Suite with Pool / 2 nights</td>
+            </tr>
+            <tr class="border-top">
+              <th class="pt-3" scope="row">Check-in</th>
+              <td class="pt-3">Wednesday, 17 June 2020</td>
+            </tr>
+            <tr class="border-bottom">
+              <th class="pb-3" scope="row">Check-out</th>
+              <td class="pb-3">Friday, 19 June 2020</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col col-lg-8 d-md-flex justify-content-md-end">
+        <button type="button" class="reserveSuccess__btn btn btn-outline-primary btn-lg d-block d-md-inline-block mr-md-2 mb-2 mb-md-0">EDIT RESERVATION</button>
+        <button onclick="location.href='index.html'" type="button" class="reserveSuccess__btn btn btn-outline-primary btn-lg d-block d-md-inline-block">HOMEPAGE</button>
+      </div> 
+    </div>
+  </div>
+</div>

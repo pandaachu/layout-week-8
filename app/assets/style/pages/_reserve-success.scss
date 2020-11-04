@@ -1,0 +1,14 @@
+.reserveSuccess{
+  .table th, .table td {
+    border-top: 0;
+    font-size: 14px;
+  }
+  .table thead th {
+    border-bottom: 0;
+  }
+  &__btn{
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+}

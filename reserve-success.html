@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aloha Reserve-success</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <header class="header container">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-md navbar-light px-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand m-0" href="index.html"><img src="./assets/images/ic-logo-aloha.svg" alt=""></a>
+            <a class="btn order-md-3 px-0 font-roboto" href="login.html">Login</a>
+            <div class="collapse navbar-collapse justify-content-md-end" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown  mr-md-5">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span class="material-icons">language</span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">中文</a>
+                    <a class="dropdown-item" href="#">English</a>
+                  </div>
+                </li>
+                <li class="nav-item mr-md-5">
+                  <a class="nav-link px-0 font-roboto" href="#">Sign up</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="reserveSuccess mt-3" style="min-height: calc(100vh - 54px - 94px);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col col-lg-8 mb-3">
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="3" scope="col"><h3 class="h3 font-title mb-2">Reservation received!</h3></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-top">
+              <th class="pt-3" scope="row">Guest</th>
+              <td class="pt-3">David Lin</td>
+            </tr>
+            <tr>
+              <th scope="row">Email</th>
+              <td>
+                <div>
+                  <p>david0520@mail.com.tw</p>
+                  <p class="font-s text-primary">Confirmation email sent to this address</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th class="pb-3" scope="row">Phone</th>
+              <td class="pb-3">+886 9 32 456 789</td>
+            </tr>
+            <tr class="border-top">
+              <th class="py-3" scope="row">Room</th>
+              <td class="py-3">Deluxe Suite with Pool / 2 nights</td>
+            </tr>
+            <tr class="border-top">
+              <th class="pt-3" scope="row">Check-in</th>
+              <td class="pt-3">Wednesday, 17 June 2020</td>
+            </tr>
+            <tr class="border-bottom">
+              <th class="pb-3" scope="row">Check-out</th>
+              <td class="pb-3">Friday, 19 June 2020</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col col-lg-8 d-md-flex justify-content-md-end">
+        <button type="button" class="reserveSuccess__btn btn btn-outline-primary btn-lg d-block d-md-inline-block mr-md-2 mb-2 mb-md-0">EDIT RESERVATION</button>
+        <button onclick="location.href='index.html'" type="button" class="reserveSuccess__btn btn btn-outline-primary btn-lg d-block d-md-inline-block">HOMEPAGE</button>
+      </div> 
+    </div>
+  </div>
+</div>
+
+    <!-- footer -->
+    <footer class="footer container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="d-flex justify-content-md-between flex-column-reverse align-items-center flex-md-row border-top py-4">
+            <div class="font-info">© 2020 ALOHA, Inc. All rights reserved.</div>
+            <div>
+              <ul class="d-flex justify-content-end">
+                <li class="mr-4"><a class="font-info" href="#">FAQs</a></li>
+                <li class="mr-4"><a class="font-info" href="#">Terms of use</a></li>
+                <li><a class="font-info" href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Datetimepicker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+</html>

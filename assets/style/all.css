@@ -3672,7 +3672,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding: 15px 1rem;
+  padding: 15px 2rem;
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.3rem;
@@ -4069,8 +4069,8 @@ input[type="button"].btn-block {
 }
 
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
-  padding-right: 0.75rem;
-  padding-left: 0.75rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .btn-group-vertical {
@@ -11673,6 +11673,7 @@ img {
 html, body {
   font-size: 1rem;
   font-family: 'Open Sans', sans-serif;
+  color: #00000099;
 }
 
 .h2 {
@@ -11763,6 +11764,10 @@ html, body {
   background: -webkit-gradient(linear, right top, left top, from(transparent), to(black));
   background: -o-linear-gradient(right, transparent 0%, black 100%);
   background: linear-gradient(to left, transparent 0%, black 100%);
+}
+
+.z-index--1 {
+  z-index: -1;
 }
 
 .z-index-1 {
@@ -12763,6 +12768,71 @@ html, body {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.reserveSuccess .table th, .reserveSuccess .table td {
+  border-top: 0;
+  font-size: 14px;
+}
+
+.reserveSuccess .table thead th {
+  border-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .reserveSuccess__btn {
+    width: 100%;
+  }
+}
+
+.login {
+  height: 100vh;
+}
+
+.login__header__close {
+  text-shadow: none;
+  opacity: 1;
+}
+
+@media (min-width: 992px) {
+  .login__header {
+    margin-bottom: 104px;
+  }
+}
+
+.login__location__icon {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+.login__background {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+@media (min-width: 992px) {
+  .login__background__img {
+    margin-right: 45px;
+  }
+}
+
+.bg {
+  position: relative;
+  height: 100vh;
+}
+
+.bg::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  background-image: url(../images/login.jpg);
+  background-position: center center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 /*# sourceMappingURL=all.css.map */

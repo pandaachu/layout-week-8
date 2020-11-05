@@ -6,8 +6,9 @@ current: index
 ---
 
 <div class="index">
+  <!-- hero banner  -->
   <section class="heroBanner position-relative">
-    <h2 class="h2 heroBanner__title position-absolute alignCenter font-weight-bold text-white">
+    <h2 class="heroBanner__title position-absolute alignCenter font-weight-bold text-white">
       Discover your
       <br class="d-lg-none" />
       ideal hotel
@@ -37,10 +38,160 @@ current: index
   <div class="container">
     <div class="row justify-content-center">
       <section class="col-lg-10">
+        <form class="searchBar d-flex justify-content-lg-between flex-column flex-lg-row p-4 rounded-lg">
+          <!-- Destination -->
+          <div class="mb-3 mb-lg-0 position-relative">
+            <div
+              class="searchBar__inputGroup input-group input-group-lg searchBar__icon searchBar__icon--location"
+              id="destinationHeading"
+              data-toggle="collapse"
+              data-target="#destination"
+              aria-controls="destination"
+            >
+              <input type="text" class="searchBar__input form-control" placeholder="Destination">
+            </div>
+            <!-- dropdown -->
+            <ul
+              id="destination"
+              class="collapse searchBar__dropdown-item shadow-sm list-group mt-2 fade"
+              aria-labelledby="destinationHeading"
+            >
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Bangkok
+                    <br />
+                    <small class="text-muted">Thailand</small>
+                  </h6>
+                </a>
+              </li>
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Osaka
+                    <br />
+                    <small>Japan</small>
+                  </h6>
+                </a>
+              </li>
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Roma
+                    <br />
+                    <small class="text-muted">Italy</small>
+                  </h6>
+                </a>
+              </li>
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Paris
+                    <br />
+                    <small class="text-muted">London</small>
+                  </h6>
+                </a>
+              </li>
+              <li class="list-group-item list-group-item-action border-0">
+                <a href="#" class="d-flex text-dark">
+                  <span class="material-icons mr-2">star</span>
+                  <h6 class="h6">
+                    Reykjavík
+                    <br />
+                    <small class="text-muted">Iceland</small>
+                  </h6>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Check time -->
+          <div class="mb-3 mb-lg-0 position-relative">
+            <div
+              class="searchBar__inputGroup input-group input-group-lg searchBar__icon searchBar__icon--dateRange"
+              id="checkTimeHeading"
+              data-toggle="collapse"
+              data-target="#checkTime"
+              aria-controls="checkTime"
+            >
+              <input
+                type="text"
+                class="searchBar__input form-control"
+                name="js-datePicker"
+                placeholder="Check-in / Check-out"
+              >
+            </div>
+            <ul
+              id="checkTime"
+              class="collapse searchBar__dropdown-item shadow-sm list-group mt-2 fade"
+              aria-labelledby="checkTimeHeading"
+            ></ul>
+          </div>
+          <!-- guests -->
+          <div class="mb-3 mb-lg-0 position-relative">
+            <div
+              class="searchBar__inputGroup input-group input-group-lg searchBar__icon searchBar__icon--person"
+              id="guestsHeading"
+              data-toggle="collapse"
+              data-target="#guests"
+              aria-controls="guests"
+            >
+              <input type="text" class="searchBar__input form-control" placeholder="Guests">
+            <!-- dropdown -->
+              <ul
+                id="guests"
+                class="collapse searchBar__dropdown-item shadow-sm list-group mt-2 fade"
+                aria-labelledby="guestsHeading"
+              >
+                <li
+                  class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center"
+                >
+                  <h6 class="h6">Adult</h6>
+                  <div class="d-flex">
+                    <a href="#"><span class="material-icons mr-3 text-dark">remove</span></a>
+                    <span class="mr-3">2</span>
+                    <a href="#"><span class="material-icons mr-3 text-dark">add</span></a>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center"
+                >
+                  <h6 class="h6">Child</h6>
+                  <div class="d-flex">
+                    <a href="#"><span class="material-icons mr-3 text-dark">remove</span></a>
+                    <span class="mr-3">0</span>
+                    <a href="#"><span class="material-icons mr-3 text-dark">add</span></a>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center"
+                >
+                  <h6 class="h6">Room</h6>
+                  <div class="d-flex">
+                    <a href="#"><span class="material-icons mr-3 text-dark">remove</span></a>
+                    <span class="mr-3">0</span>
+                    <a href="#"><span class="material-icons mr-3 text-dark">add</span></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- button -->
+          <button type="button" onclick="location.href='result.html'" class="btn btn-lg btn-primary">SEARCH</button>
+        </form>
+      </section>
+    </div>
+  </div>
+  <!-- <div class="container">
+    <div class="row justify-content-center">
+      <section class="col-lg-10">
         <form class="searchBar d-flex flex-column flex-md-row p-4 rounded-lg">
           <div
             id="destinationHeading"
-            class="searchBar__group rounded btn mb-3 mb-lg-0"
+            class="searchBar__group rounded btn mb-3 mb-md-0"
             data-toggle="collapse"
             data-target="#destination"
             aria-controls="destination"
@@ -108,21 +259,18 @@ current: index
           </div>
           <div
             id="checkTimeHeading"
-            class="searchBar__group rounded btn btn mb-3 mb-lg-0"
+            class="searchBar__group rounded btn mb-3 mb-md-0"
             data-toggle="collapse"
             data-target="#checkTime"
             aria-controls="checkTime"
           >
             <div class="searchBar__group__heading searchBar__icon searchBar__icon--dateRange">
-              <!-- <h6 class="h6 text-muted ">Check-in / Check-out</h6> -->
-              <!-- <span class="material-icons mr-3">date_range</span> -->
               <input
                 class="searchBar__input font-openSans"
                 type="text"
                 name="js-datePicker"
                 placeholder="Check-in / Check-out"
               />
-              <!-- <label for="dates1">dates1</label><input id="dates1" type="text" name="dates" value="" /> -->
             </div>
             <ul
               id="checkTime"
@@ -132,7 +280,7 @@ current: index
           </div>
           <div
             id="guestsHeading"
-            class="searchBar__group rounded btn btn mb-3 mb-lg-0"
+            class="searchBar__group rounded btn btn mb-3 mb-md-0"
             data-toggle="collapse"
             data-target="#guests"
             aria-controls="guests"
@@ -156,49 +304,39 @@ current: index
                   <a href="#"><span class="material-icons mr-3">add</span></a>
                 </div>
               </li>
-              <li class="list-group-item list-group-item-action border-0">
-                <a href="#" class="d-flex text-dark">
-                  <span class="material-icons mr-2">star</span>
-                  <h6 class="h6">
-                    Osaka
-                    <br />
-                    <small>Japan</small>
-                  </h6>
-                </a>
+              <li
+                class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center"
+              >
+                <h6 class="h6">Adult</h6>
+                <div class="d-flex">
+                  <a href="#"><span class="material-icons mr-3">remove</span></a>
+                  <span class="mr-3">0</span>
+                  <a href="#"><span class="material-icons mr-3">add</span></a>
+                </div>
               </li>
-              <li class="list-group-item list-group-item-action border-0">
-                <a href="#" class="d-flex text-dark">
-                  <span class="material-icons mr-2">star</span>
-                  <h6 class="h6">
-                    Roma
-                    <br />
-                    <small class="text-muted">Italy</small>
-                  </h6>
-                </a>
-              </li>
-              <li class="list-group-item list-group-item-action border-0">
-                <a href="#" class="d-flex text-dark">
-                  <span class="material-icons mr-2">star</span>
-                  <h6 class="h6">
-                    Paris
-                    <br />
-                    <small class="text-muted">London</small>
-                  </h6>
-                </a>
+              <li
+                class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center"
+              >
+                <h6 class="h6">Adult</h6>
+                <div class="d-flex">
+                  <a href="#"><span class="material-icons mr-3">remove</span></a>
+                  <span class="mr-3">0</span>
+                  <a href="#"><span class="material-icons mr-3">add</span></a>
+                </div>
               </li>
             </ul>
           </div>
-          <button type="button" onclick="location.href='result.html'" class="btn btn-primary text-uppercase">search</button>
+          <button type="button" onclick="location.href='result.html'" class="btn btn-lg btn-primary text-uppercase">search</button>
         </form>
       </section>
     </div>
-  </div>
+  </div> -->
   <!-- choices -->
-  <section class="choices mb-sec-1">
+  <section class="choices">
     <div class="container">
       <div class="row">
         <div class="col">
-          <h2 class="h2 font-raleway font-weight-bold mb-4">Top Choices</h2>
+          <h2 class="h2 font-title mb-4">Top Choices</h2>
           <ul
             class="nav nav-tabs border-0 mb-3 font-raleway font-weight-bold"
             id="myTab"
@@ -265,10 +403,10 @@ current: index
               <div class="card border-0 mb-3">
                 <div class="bg-cover bg-cover--center choices__card choices__card1 rounded"></div>
                 <div class="card-body px-0">
-                  <h5 class="card-title font-weight-bold">Hotel Aqua</h5>
+                  <h5 class="card-title font-weight-bold text-dark">Hotel Aqua</h5>
                   <div class="d-flex align-items-center mb-2">
-                    <span class="h6 material-icons mr-2">star star star star star</span>
-                    <span class="h6">5.0</span>
+                    <span class="h6 material-icons mr-2 text-dark star star--5"></span>
+                    <span class="h6 text-dark">5.0</span>
                     <span class="font-s">・2k reviews</span>
                   </div>
                   <p class="card-text">
@@ -282,10 +420,10 @@ current: index
               <div class="card border-0 mb-3">
                 <div class="bg-cover bg-cover--center choices__card choices__card2 rounded"></div>
                 <div class="card-body px-0">
-                  <h5 class="card-title font-weight-bold">Mr. Kawasaki Inn</h5>
+                  <h5 class="card-title font-weight-bold text-dark">Mr. Kawasaki Inn</h5>
                   <div class="d-flex align-items-center mb-2">
-                    <span class="h6 material-icons mr-2">star star star star</span>
-                    <span class="h6">4.0</span>
+                    <span class="h6 material-icons mr-2 star star--4"></span>
+                    <span class="h6 text-dark">4.0</span>
                     <span class="font-s">・500 reviews</span>
                   </div>
                   <p class="card-text">TWD 3,380</p>
@@ -296,10 +434,10 @@ current: index
               <div class="card border-0 mb-3">
                 <div class="bg-cover bg-cover--center choices__card choices__card3 rounded"></div>
                 <div class="card-body px-0">
-                  <h5 class="card-title font-weight-bold">Weekly Paradise</h5>
+                  <h5 class="card-title font-weight-bold text-dark">Weekly Paradise</h5>
                   <div class="d-flex align-items-center mb-2">
-                    <span class="h6 material-icons mr-2">star star star star</span>
-                    <span class="h6">4.0</span>
+                    <span class="h6 material-icons mr-2 star star--4"></span>
+                    <span class="h6 text-dark">4.0</span>
                     <span class="font-s">・470 reviews</span>
                   </div>
                   <p class="card-text">TWD 4,780</p>
@@ -310,10 +448,10 @@ current: index
               <div class="card border-0 mb-3">
                 <div class="bg-cover bg-cover--center choices__card choices__card4 rounded"></div>
                 <div class="card-body px-0">
-                  <h5 class="card-title font-weight-bold">Beast Hotel</h5>
+                  <h5 class="card-title font-weight-bold text-dark">Beast Hotel</h5>
                   <div class="d-flex align-items-center mb-2">
-                    <span class="h6 material-icons mr-2">star star star star</span>
-                    <span class="h6">4.0</span>
+                    <span class="h6 material-icons mr-2 star star--4"></span>
+                    <span class="h6 text-dark">4.0</span>
                     <span class="font-s">・283 reviews</span>
                   </div>
                   <p class="card-text">TWD 1,980</p>
@@ -324,10 +462,10 @@ current: index
               <div class="card border-0 mb-3">
                 <div class="bg-cover bg-cover--center choices__card choices__card1 rounded"></div>
                 <div class="card-body px-0">
-                  <h5 class="card-title font-weight-bold">Hotel Aqua</h5>
+                  <h5 class="card-title font-weight-bold text-dark">Hotel Aqua</h5>
                   <div class="d-flex align-items-center mb-2">
-                    <span class="h6 material-icons mr-2">star star star star star</span>
-                    <span class="h6">5.0</span>
+                    <span class="h6 material-icons mr-2 star star--5"></span>
+                    <span class="h6 text-dark">5.0</span>
                     <span class="font-s">・2k reviews</span>
                   </div>
                   <p class="card-text">
@@ -341,10 +479,10 @@ current: index
               <div class="card border-0 mb-3">
                 <div class="bg-cover bg-cover--center choices__card choices__card1 rounded"></div>
                 <div class="card-body px-0">
-                  <h5 class="card-title font-weight-bold">Hotel Aqua</h5>
+                  <h5 class="card-title font-weight-bold text-dark">Hotel Aqua</h5>
                   <div class="d-flex align-items-center mb-2">
-                    <span class="h6 material-icons mr-2">star star star star star</span>
-                    <span class="h6">5.0</span>
+                    <span class="h6 material-icons mr-2 star star--5"></span>
+                    <span class="h6 text-dark">5.0</span>
                     <span class="font-s">・2k reviews</span>
                   </div>
                   <p class="card-text">
@@ -366,7 +504,7 @@ current: index
   <section class="container popular mb-sec-1">
     <div class="row">
       <div class="col">
-        <h2 class="h2 font-raleway font-weight-bold mb-4">Popular Destinations</h2>
+        <h2 class="h2 font-title mb-4">Popular Destinations</h2>
       </div>
     </div>
     <div class="row">
@@ -460,7 +598,7 @@ current: index
   <section class="container inspiration mb-sec-1">
     <div class="row">
       <div class="col d-flex justify-content-between mb-4">
-        <h2 class="h2 font-raleway font-weight-bold">Get Inspiration</h2>
+        <h2 class="h2 font-title">Get Inspiration</h2>
         <button type="button" class="btn btn-outline-primary my-auto">see more</button>
       </div>
     </div>
@@ -469,7 +607,7 @@ current: index
         <div class="inspiration__card card border-0">
           <div class="inspiration__card__img inspiration__card__img1 rounded-lg card-img-top bg-cover bg-cover--center"></div>
           <div class="card-body px-0">
-            <h4 class="h4 card-title font-raleway font-weight-bold mb-2">The Fifth Most Visited Country</h4>
+            <h4 class="h4 card-title font-title mb-2">The Fifth Most Visited Country</h4>
             <p class="card-text font-openSans text-muted">Italy is the fifth most visited country in the world, with a total of 52.3 million…</p>
           </div>
         </div>
@@ -478,7 +616,7 @@ current: index
         <div class="inspiration__card card border-0">
           <div class="inspiration__card__img inspiration__card__img2 rounded-lg card-img-top bg-cover bg-cover--center"></div>
           <div class="card-body px-0">
-            <h4 class="h4 card-title font-raleway font-weight-bold mb-2">Visit Thailand for Bangkok</h4>
+            <h4 class="h4 card-title font-title mb-2">Visit Thailand for Bangkok</h4>
             <p class="card-text font-openSans text-muted">Asian tourists primarily visit Thailand for Bangkok and the historical, natural, and…</p>
           </div>
         </div>
@@ -487,8 +625,23 @@ current: index
         <div class="inspiration__card card border-0">
           <div class="inspiration__card__img inspiration__card__img3 rounded-lg card-img-top bg-cover bg-cover--center"></div>
           <div class="card-body px-0">
-            <h4 class="h4 card-title font-raleway font-weight-bold mb-2">Lord of the Rings Tour</h4>
+            <h4 class="h4 card-title font-title mb-2">Lord of the Rings Tour</h4>
             <p class="card-text font-openSans text-muted">The national cuisine has been described as Pacific Rim, incorporating the native Māori…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="subscribe bg-secondary">
+    <div class="container">
+      <h2 class="subscribe__title font-title text-dark font-weight-bold text-center mb-4 mt-md-0  pt-4 pt-mb-0">Subscribe for Exclusive Offer</h2>
+      <div class="row justify-content-md-center">
+        <div class="col-lg-6 col-md-10">
+          <div class="input-group mb-4">
+            <input type="text" class="subscribe__input form-control form-control-lg border-0" placeholder="Your email address">
+            <div class="input-group-append">
+              <button class="btn btn-lg btn-primary text-uppercase" type="button">subscribe</button>
+            </div>
           </div>
         </div>
       </div>

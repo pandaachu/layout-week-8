@@ -1,0 +1,58 @@
+.member{
+  &__navbar{
+    &__link{
+      color: $dark;
+      &.active{
+        color: $primary;
+      }
+    }
+  }
+  &__profile {
+    @include media-breakpoint-up(md) {
+      flex: 1;
+    }
+  }
+  &__payment {
+    @include media-breakpoint-up(md) {
+      flex: 1;
+    }
+  }
+  &__card{
+    &:not(:last-child){
+      @include media-breakpoint-up(md) {
+        border-bottom: 1px solid #dee2e6;
+      }
+    }
+    &:nth-of-type(2){
+      @include media-breakpoint-down(sm) {
+        border-bottom: 1px solid #dee2e6;
+      }
+    }
+    &__body{
+      background-color: $secondary;
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      @include media-breakpoint-up(md) {
+        background-color: transparent;
+      }
+    }
+    &__imgWrap{
+      height: 226px;
+      @include media-breakpoint-up(md) {
+        height: 186px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 175px;
+      }
+    }
+    &__img{
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      @include media-breakpoint-up(md) {
+        border-radius: 0;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+    }
+  }  
+}

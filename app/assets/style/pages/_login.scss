@@ -20,19 +20,21 @@
     padding-right: 0;
     padding-left: 0;
     @include media-breakpoint-up(lg){
-      // padding-right: 15px;
-      // margin-right: auto;
-      // .row{
-      //   margin-right: -15px;
-      // }
-      // .col-lg-8{
-      //   padding-right: 15px;
-      // }
       &__img{
         margin-right: 45px;
+        max-width: 55vw;
       }
     }
   }    
+  // &__background{
+  //   padding-right: 0;
+  //   padding-left: 0;
+  //   @include media-breakpoint-up(lg){
+  //     &__img{
+  //       margin-right: 45px;
+  //     }
+  //   }
+  // }    
 }
 .bg{
   position: relative;

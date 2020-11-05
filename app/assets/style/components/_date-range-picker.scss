@@ -6,28 +6,23 @@
   left: -32px;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
-  // line-height: 1em;
   &::after, &::before{
     display: none;
   }
   .left::after{
-    content: '';
-    display: block;
-    position: absolute;
-    right: 50%;
-    top: 55%;
-    transform: translateY(-50%);
-    width: 2px;
-    height: 80%;
-    background-color: $gray-200;
+    @include media-breakpoint-up(md) {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 50%;
+      top: 55%;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 80%;
+      background-color: $gray-200;
+    }
   }
 }
-// .daterangepicker .drp-calendar.left .calendar-table {
-//   padding-right: 0;
-// }
-// .daterangepicker .drp-calendar.right {
-//   padding-left: 0;
-// }
 .daterangepicker td.in-range {
     background-color: $secondary;
   }

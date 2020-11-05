@@ -14,11 +14,21 @@
     }
     &__title {
       z-index: 10;
+      font-size: 2rem;
+      @include media-breakpoint-up(md) {
+        font-size: 3rem;
+      }
     }
     &__button {
+      &::after{
+        font-size: 1rem;
+      }
       @include media-breakpoint-up(lg) {
         padding-right: 20%;
         padding-left: 20%;
+        &::after{
+          font-size: 2rem;
+        }
       }
     }
     &__swiper {
@@ -34,10 +44,14 @@
   }
   .searchBar {
     position: relative;
-    transform: translateY(-50%);
+    transform: translateY(-20%);
     z-index: 2;
+    @include media-breakpoint-up(lg) {
+      transform: translateY(-50%);
+    }
   }
   .choices {
+    margin-bottom: 1rem;
     &__card {
       height: 164px;
       @include media-breakpoint-up(md) {
@@ -111,6 +125,23 @@
       }
       &__img3{
         background-image: url(../images/inspiration/jeff-finley-bK8Wlaq7NaA-unsplash.jpg);
+      }
+    }
+  }
+  .subscribe{
+    @include media-breakpoint-up(md) {
+      padding-top: 92px;
+      padding-bottom: 92px;
+    }
+    &__title {
+      font-size: 1.5rem;
+      @include media-breakpoint-up(md) {
+        font-size: 3rem;
+      }
+    }
+    &__input{
+      @include media-breakpoint-down(sm) {
+        padding-left: 1rem;
       }
     }
   }

@@ -5,5 +5,152 @@ engine: ejs
 current: Member
 ---
 
-<div class="member mt-4 mb-5">
+<div class="member container" style="min-height: calc(100vh - 62px - 72px);">
+  <div class="row flex-lg-row-reverse">
+    <!-- profile -->
+    <div class="col-lg-4 col-12">
+      <!-- profile title -->
+      <div class="d-flex align-items-center">
+        <h3 class="h3 font-title text-dark mr-2 my-4">Profile</h3>
+        <div class="mr-auto">
+          <div class="badge badge-pill badge-primary d-inline-flex align-items-center font-s font-weight-light  py-1">
+            <span class="material-icons h6 mr-1">check</span>
+            VERIFIED
+          </div>
+        </div>
+        <a class="font-weight-bold" href="">EDIT</a>
+      </div>
+      <!-- profile content -->
+      <div class="p-4 bg-secondary rounded-lg d-flex flex-md-row flex-column flex-lg-column justify-content-md-between">
+        <div class="member__profile d-flex flex-column flex-wrap align-content-between mb-3 mb-md-0" style="max-height: 200px;">
+          <div class="mb-lg-4">
+            <h6 class="h6 font-weight-bold text-dark mb-4">User details</h6>
+            <div class="d-flex">
+              <img class="rounded-lg mr-md-3 d-md-none d-lg-block d-none" src="./assets/images/sung-wang-g4DgCF90EM4-unsplash.jpg" alt="" style="width: 64px; height: 64px;">
+              <ul>
+                <li class="font-info mb-3 mb-md-2">David Lin</li>
+                <li class="font-info mb-3 mb-md-2">david0520@mail.com.tw</li>
+                <li class="font-info mb-3 mb-md-2">+886 9 32 456 789</li>
+              </ul>
+            </div>
+          </div>
+          <div class="d-md-none">
+            <img class="rounded-lg" src="./assets/images/sung-wang-g4DgCF90EM4-unsplash.jpg" alt="" style="width: 64px; height: 64px;">
+          </div>
+        </div>
+        <div class="member__payment">
+          <h6 class="h6 font-weight-bold text-dark mb-4">Payment methods</h6>
+          <div class="d-flex justify-content-between">
+            <ul class="p-3 bg-white rounded mr-2" style="flex: 1;">
+              <li class="font-info mb-1">xxxx-xxxx-7890</li>
+              <li class="font-info mb-1">DAVID LIN</li>
+              <li class="font-info d-flex align-items-center">08/2029 <span class="material-icons h6 mr-1 ml-auto">credit_card</span></li>
+            </ul>
+            <div class="p-3 bg-white rounded d-flex justify-content-center align-items-center" style="flex: 1;">
+              <div>
+                <a class="material-icons rounded-circle text-primary h3" href="#">
+                  add_circle
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bookingd etails -->
+    <div class="col-lg-8 col-12">
+      <div class="row">
+        <div class="col-12 mb-2">
+          <h3 class="h3 font-title text-dark my-4">My Bookings</h3>
+          <ul class="d-flex member__navbar">
+            <li class="mr-3"><a class="member__navbar__link active font-weight-bold" href="">Upcoming</a></li>
+            <li><a class="member__navbar__link font-weight-bold" href="">Completed</a></li>
+          </ul>
+        </div>
+        <!-- card -->
+        <div class="col-12">
+          <div class="member__card row py-4">
+            <!-- card img -->
+            <div class="member__card__imgWrap col-12 col-lg-4 col-md-5">
+              <div
+                class="member__card__img bg-cover bg-cover--center h-100"
+                style="background-image: url(./assets/images/hotel/taylor-simpson-R49Mu5jfgSk-unsplash.jpg);"
+              ></div>
+            </div>
+            <!-- card body -->
+            <div class="col-md col-12">
+              <div class="member__card__body d-flex flex-column justify-content-md-between flex-md-row pt-3 pl-4 pl-md-0 pb-3 pb-md-0">
+                <ul class="d-flex flex-column justify-content-between mb-3 mb-md-0 mr-md-4">
+                  <li class="d-flex mb-3">
+                    <span class="material-icons text-dark h4 mr-3">hotel</span>
+                    <div>
+                      <h6 class="h6 text-dark font-weight-bold">Rachada Hotel</h6>
+                      <p class="font-info">Deluxe Suite with Pool</p>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-3">
+                    <span class="material-icons text-dark h4 mr-3">date_range</span>
+                    <div>
+                      <h6 class="h6 text-dark font-weight-bold">17 June 2020 - 19 June 2020</h6>
+                      <p class="font-info">2 nights・2 adults</p>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-icons text-dark h4 mr-3">attach_money</span>
+                    <div>
+                      <h6 class="h6 text-dark font-weight-bold">TWD 4,633</h6>
+                      <p class="font-info">includes taxes and charges</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="font-weight-bold d-flex justify-content-md-center justify-content-start mr-lg-3">
+                  <a href="">VIEW DETAILS</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="member__card row py-4">
+            <!-- card img -->
+            <div class="member__card__imgWrap col-12 col-lg-4 col-md-5">
+              <div
+                class="member__card__img bg-cover bg-cover--center h-100"
+                style="background-image: url(./assets/images/hotel/dmitriy-tyukov-RFN9qGuDWQA-unsplash.jpg);"
+              ></div>
+            </div>
+            <!-- card body -->
+            <div class="col-md col-12">
+              <div class="member__card__body d-flex flex-column flex-md-row justify-content-md-between pt-3 pl-4 pl-md-0 pb-3 pb-md-0">
+                <ul class="d-flex flex-column justify-content-between mb-3 mb-md-0 mr-md-4">
+                  <li class="d-flex mb-3">
+                    <span class="material-icons text-dark h4 mr-3">hotel</span>
+                    <div>
+                      <h6 class="h6 text-dark font-weight-bold">WOW Life Hotel</h6>
+                      <p class="font-info">Standard Double Room</p>
+                    </div>
+                  </li>
+                  <li class="d-flex mb-3">
+                    <span class="material-icons text-dark h4 mr-3">date_range</span>
+                    <div>
+                      <h6 class="h6 text-dark font-weight-bold">8 Sep 2020 - 15 Sep 2020</h6>
+                      <p class="font-info">7 nights・2 adults</p>
+                    </div>
+                  </li>
+                  <li class="d-flex">
+                    <span class="material-icons text-dark h4 mr-3">attach_money</span>
+                    <div>
+                      <h6 class="h6 text-dark font-weight-bold">TWD 13,084</h6>
+                      <p class="font-info">includes taxes and charges</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="font-weight-bold d-flex justify-content-md-center justify-content-start mr-lg-3">
+                  <a href="">VIEW DETAILS</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

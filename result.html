@@ -102,13 +102,8 @@
   <section class="result__filter container">
     <div class="row align-items-end my-4">
       <div class="col col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
-        <h3 class="h3 font-raleway font-weight-bold">Bangkok <sup class="text-primary">3,240</sup></h3>
+        <h3 class="h3 font-title">Bangkok <sup class="text-primary">3,240</sup></h3>
       </div>
-      <!-- <div class="col col-md-8">
-        <button id="btn-modal" type="button" class="btn btn-primary d-md-none" data-toggle="modal" data-target="#resultModal">
-          Launch demo modal
-        </button>
-      </div> -->
       <div class="col col-md-8 position-relative">
         <div class="d-md-none">
           <ul class="d-flex justify-content-between">
@@ -714,7 +709,7 @@
                   <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-md-end">
                     <div>
                       <p class="hotelsDetails__card__room text-muted font-weight-bold">Standard Double Room</p>
-                      <p class="text-muted font-s mb-1">2 guests・1 bed (Queen size)</p>
+                      <p class="text-muted font-s mb-md-3 mb-2">2 guests・1 bed (Queen size)</p>
                     </div>
                     <div class="text-right">
                       <p class="font-s text-muted d-none d-md-block">per night</p>
@@ -809,11 +804,11 @@
       <div class="container">
         <div class="row flex-column flex-md-row align-items-center">
           <div class="col-lg-5 col-md-4 col">
-            <h3 class="h3 font-raleway font-weight-bold mb-3 mb-md-0">Subscribe for Exclusive Offer</h2>
+            <h3 class="h3 font-title mb-3 mb-md-0">Subscribe for Exclusive Offer</h2>
           </div>
           <div class="col-lg-7 col-md-8 col">
             <div class="input-group">
-              <input type="text" class="form-control form-control-lg border-0" placeholder="Your email address" aria-label="email" aria-describedby="button-addon2">
+              <input type="text" class="form-control form-control-lg border-0" placeholder="Your email address" aria-label="email" >
               <div class="input-group-append">
                 <button class="btn btn-lg btn-primary text-uppercase type="button">subscribe</button>
               </div>
@@ -825,31 +820,43 @@
 
     <!-- footer -->
     <footer class="footer container d-flex flex-md-row flex-column-reverse justify-content-center py-4">
-      <div class="text-muted text-center mr-md-5">© 2020 ALOHA, Inc. All rights reserved.</div>
+      <div class="font-info text-center mr-md-5">© 2020 ALOHA, Inc. All rights reserved.</div>
       <ul class="d-flex mr-lg-auto justify-content-center">
-        <li class="mr-4"><a class="text-muted" href="#">FAQs</a></li>
-        <li class="mr-4"><a class="text-muted" href="#">Terms of use</a></li>
-        <li><a class="text-muted" href="#">Privacy policy</a></li>
+        <li class="mr-4"><a class="font-info" href="#">FAQs</a></li>
+        <li class="mr-4"><a class="font-info" href="#">Terms of use</a></li>
+        <li><a class="font-info" href="#">Privacy policy</a></li>
       </ul>
       <ul class="d-lg-flex d-none">
         <li class="nav-item dropdown mr-md-5">
-          <a class="nav-link p-0 dropdown-toggle text-muted d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <span class="material-icons">language</span>
-            <span >English</span>
+          <a
+            class="nav-link p-0 dropdown-toggle text-muted d-flex align-items-center"
+            href="#"
+            id="footerLanguage"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            <span class="material-icons text-dark">language</span>
+            <span class="font-info">English</span>
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="footerLanguage">
             <a class="dropdown-item" href="#">中文</a>
             <a class="dropdown-item" href="#">English</a>
           </div>
         </li>
         <li class="nav-item dropdown mr-md-5">
-          <a class="nav-link p-0 dropdown-toggle text-muted d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <span class="material-icons">attach_money</span>
-            <span>TWD</span>
+          <a
+            class="nav-link p-0 dropdown-toggle text-muted d-flex align-items-center"
+            href="#"
+            id="footerMoney"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            <span class="material-icons text-dark">attach_money</span>
+            <span class="font-info">TWD</span>
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="footerMoney">
             <a class="dropdown-item" href="#">TWD</a>
             <a class="dropdown-item" href="#">USD</a>
           </div>

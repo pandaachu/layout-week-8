@@ -12080,6 +12080,7 @@ html, body {
 .searchSideBar__title {
   margin-bottom: 17px;
   font-weight: bold;
+  color: #000000DE;
 }
 
 .searchSideBar__text {
